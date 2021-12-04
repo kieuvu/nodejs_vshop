@@ -1,0 +1,204 @@
+<div class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="main-body">
+          <div class="page-wrapper">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+              <div class="page-block">
+                <div class="row align-items-center">
+                  <div class="col-md-12">
+                    <div class="page-header-title">
+                      <h5 class="m-b-10">Thêm sản phẩm</h5>
+                    </div>
+                    <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                      <li class="breadcrumb-item"><a href="#!">Form Components</a></li>
+                      <li class="breadcrumb-item"><a href="#!">Form Elements</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <form action="/admin/product/add/" method="POST" enctype='multipart/form-data'>
+              <div class="row">
+                <!-- [ form-element ] start -->
+                <div class="col-sm-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>Điền đầy đủ thông tin</h5>
+                      <hr>
+                      <form action="">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label for="prd_name">
+                                1.Tên sản phẩm:
+                              </label>
+                              <input required type="text" class="form-control" id="prd_name" name="prd_name"
+                                placeholder="Nhập tên sản phẩm">
+                            </div>
+                            <div class="row">
+                              <div class="col-6">
+                                <div class="form-group">
+                                  <label for="prd_quantity">
+                                    2.Số lượng:
+                                  </label>
+                                  <input required type="number" min="0" value="0" class="form-control" id="prd_quantity"
+                                    name="prd_quantity" placeholder="Nhập số lượng sản phẩm">
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="form-group">
+                                  <label for="prd_quantity">
+                                    3.Giá sản phẩm:
+                                  </label>
+                                  <input required type="number" min="0" value="0" class="form-control" id="prd_price"
+                                    placeholder="Nhập số lượng sản phẩm" name="prd_price">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label for="prd_brand">
+                                4.Thương hiệu:
+                              </label>
+                              <select required class="form-control" id="prd_brand" name="prd_brand">
+                                <option value=''></option>
+                                <option value="samsung">Samsung</option>
+                                <option value="oppo">Oppo</option>
+                                <option value="lenovo">Lenovo</option>
+                                <option value="asus">Asus</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="prd_cate">
+                                5.Danh mục:
+                              </label>
+                              <select required class="form-control" id="prd_cate" name="prd_cate">
+                                <option value=''></option>
+                                <option value="laptop">Laptop</option>
+                                <option value="laptop">Laptop</option>
+                                <option value="laptop">Laptop</option>
+                                <option value="laptop">Laptop</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <label {{#if stt.err}} class="alert-danger" {{/if}}>
+                              6.Chọn ảnh sản phẩm:
+                            </label>
+                            {{#if stt.err}}
+                            <span class="text-danger">{{stt.err}}</span>
+                            {{/if}}
+                            <div class="row">
+                              <div class="col-6 col-lg-3">
+                                <div class="form-group mb-3">
+                                  <label {{#if stt.err}} class="text-danger" {{/if}}>
+                                    6.1 Ảnh đại diện:
+                                  </label>
+                                  <input required type="file" class="form-control-file " id="prd_stImg" name="prd_stImg"
+                                    accept="image/*">
+                                </div>
+                                <div id="img_preview1" class="mb-3">
+                                  <img alt="" id="img_preview-img1" style="object-fit: cover;height:100px;width:100px;">
+                                </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                <div class="form-group mb-3">
+                                  <label {{#if stt.err}} class="text-danger" {{/if}}>
+                                    6.2 Ảnh liên quan 1:
+                                  </label>
+                                  <input required type="file" class="form-control-file " id="prd_scImg" name="prd_scImg"
+                                    accept="image/*">
+                                </div>
+                                <div id="img_preview2" class="mb-3">
+                                  <img alt="" id="img_preview-img2" style="object-fit: cover;height:100px;width:100px;">
+                                </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                <div class="form-group mb-3">
+                                  <label {{#if stt.err}} class="text-danger" {{/if}}>
+                                    6.3 Ảnh liên quan 2:
+                                  </label>
+                                  <input required type="file" class="form-control-file " id="prd_rdImg" name="prd_rdImg"
+                                    accept="image/*">
+                                </div>
+                                <div id="img_preview3" class="mb-3">
+                                  <img alt="" id="img_preview-img3" style="object-fit: cover;height:100px;width:100px;">
+                                </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                <div class="form-group mb-3">
+                                  <label {{#if stt.err}} class="text-danger" {{/if}}>
+                                    6.4 Ảnh liên quan 3:
+                                  </label>
+                                  <input required type="file" class="form-control-file " id="prd_thImg" name="prd_thImg"
+                                    accept="image/*">
+                                </div>
+                                <div id="img_preview4" class="mb-3">
+                                  <img alt="" id="img_preview-img4" style="object-fit: cover;height:100px;width:100px;">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-group">
+                              <label for="prd_quantity">
+                                7.Mô tả sản phẩm:
+                              </label>
+                              <textarea class="form-control" name="prd_desc" id="prd_desc" rows="3"></textarea>
+                            </div>
+                          </div>
+                          <div>
+                            <button type="submit" class="mt-3 ml-3 btn btn-primary">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- [ form-element ] end -->
+                <!-- [ Main Content ] end -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+<script src="/js/addnew.js"></script>
+
+{{#if stt}}
+<script>
+  if (!{{ stt.err }}) {
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Thêm thành công !!!',
+      showConfirmButton: false,
+      timerProgressBar: true,
+      timer: 1500
+    }).then(function () {
+      window.location.href = '/admin/product/add';
+    })
+  } else {
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Thêm thất bại !!!',
+      showConfirmButton: false,
+      timerProgressBar: true,
+      timer: 1500
+    }).then(function () {
+      window.location.href = '/admin/product/add';
+    })
+  }
+</script>
+{{/if}}
