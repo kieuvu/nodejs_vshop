@@ -2,6 +2,7 @@ const Account = require('../models/account.model');
 const bcrypt = require('bcrypt');
 
 class LoginAuthenticate {
+
   async authenticate(req, res, next) {
     const username = req.body.username;
     const password = req.body.password;
@@ -14,13 +15,13 @@ class LoginAuthenticate {
       err.all = "Vui lòng điền đầy đủ tài khoản, mật khẩu !!!";
     } else {
       await Account.find({ username: username })
-        .then(async function (data) {
+        .then(async (data) => {
           if (!data.length) {
             err.err = true;
             err.username = 'Tài khoản không tồn tại !!!';
           } else {
             await bcrypt.compare(password, data[0].password)
-              .then(function (result) {
+              .then((result) => {
                 if (!result) {
                   err.err = true;
                   err.password = 'Sai mật khẩu !!!';

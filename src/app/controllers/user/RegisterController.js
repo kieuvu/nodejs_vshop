@@ -19,7 +19,7 @@ class RegisterController {
     let passwordHashed = null;
 
     await bcrypt.hash(password, 10)
-      .then(function (hashed) {
+      .then((hashed) => {
         passwordHashed = hashed;
       });
 
@@ -29,10 +29,10 @@ class RegisterController {
     });
 
     await newUser.save()
-      .then(function () {
+      .then(() => {
         res.render('user/pages/register', { title: "Đăng kí", stt: stt });
       })
-      .catch(function () {
+      .catch(() => {
         stt.err = true;
         res.json(stt);
       });

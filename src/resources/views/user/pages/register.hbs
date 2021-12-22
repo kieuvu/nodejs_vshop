@@ -1,0 +1,92 @@
+<div id="register" class="d-flex align-items-center" style="height: calc(100vh - 40px)">
+  <div class="container">
+    <div class=" row justify-content-center">
+      <div class="col-lg-10 col-xl-9 mx-auto" style=" max-width:600px">
+        <div class=" card flex-row my-5 border-0 shadow rounded-3 overflow-hidden ">
+          <div class=" card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">ĐĂNG KÝ</h5>
+            <form method="POST" action="/register/create">
+              <div class="form-floating mb-3">
+                <label for="floatingInputUsername">Tên đăng nhập:</label>
+                <input type="text" class="form-control" id="floatingInputUsername" placeholder="Nhập tên tài khoản !"
+                  name="username" required autofocus />
+              </div>
+
+              {{#if err.username}}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> {{err.username}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              {{/if}}
+
+              <hr />
+
+              <div class="form-floating mb-3">
+                <label for="floatingPassword">Mật khẩu:</label>
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Nhập mật khẩu !"
+                  name="password" required />
+              </div>
+
+              <div class="form-floating mb-3">
+                <label for="floatingPasswordConfirm">Xác nhận mật khẩu:</label>
+                <input type="password" class="form-control" id="floatingPasswordConfirm"
+                  placeholder="Nhập lại mật khẩu !" name="repass" required />
+              </div>
+
+              {{#if err.password}}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> {{err.password}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              {{/if}}
+
+              <div class="notif mb-3">
+                <small>
+                  <i> * Tài khoản phải tối thiểu 8 ký tự và không chứa ký tự đặc biệt !</i>
+                </small>
+                <br />
+                <small>
+                  <i>* Mật khẩu phải tối thiểu 8 ký tự, ít nhất 1 số, và 1 chữ thường ! </i>
+                </small>
+              </div>
+
+              <div class="d-grid mb-2 text-right">
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" style="font-size: 14px;"
+                  type="submit">
+                  Đăng kí
+                </button>
+              </div>
+
+              <hr class="my-4" />
+
+              <a class="d-block text-center mt-2 small" href="#">Đã có tải khoản? Bấm vào đây để đăng nhập.</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./js/checkCookie.js"></script>
+
+{{#if stt}}
+<script>
+  if (!{{ stt.err }}) {
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Đăng ký thành công !!!',
+      showConfirmButton: false,
+      timerProgressBar: true,
+      timer: 1500
+    }).then(function () {
+      window.location.href = '/login';
+    })
+  }
+</script>
+{{/if}}

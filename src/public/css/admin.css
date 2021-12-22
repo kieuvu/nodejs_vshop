@@ -1,3 +1,7 @@
 input[type="file"] {
   color: white;
 }
+
+.btn {
+  cursor: pointer;
+}

@@ -1,11 +1,13 @@
 const Account = require('../models/account.model');
 
 class RegisterValidate {
-  // [POST]
+
   async validate(req, res, next) {
     // RegExp
     const accountRegex = /^[a-zA-Z0-9]{8,}$/;
-    const passwordRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{8,})");
+    const passwordRegex = new RegExp(
+      "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{8,})"
+    );
 
     // Store Validate Status
     const err = {
@@ -23,7 +25,7 @@ class RegisterValidate {
       err.err = true;
     } else {
       await Account.find({ username: username })
-        .then(function (data) {
+        .then((data) => {
           if (data.length) {
             err.username = "Tài khoản đã tồn tại !!!";
             err.err = true;

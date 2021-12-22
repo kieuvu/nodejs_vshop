@@ -1,0 +1,99 @@
+<section class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="main-body">
+          <div class="page-wrapper">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+              <div class="page-block">
+                <div class="row align-items-center">
+                  <div class="col-md-12">
+                    <div class="page-header-title">
+                      <h5 class="m-b-10">Quản lý sản phẩm</h5>
+                    </div>
+                    <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                      <li class="breadcrumb-item"><a href="#!">Bootstrap Table</a></li>
+                      <li class="breadcrumb-item"><a href="#!">Basic Tables</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <div class="row">
+              <!-- [ stiped-table ] start -->
+              <div class="col-xl-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Tất cả sản phẩm</h5>
+                  </div>
+                  <form action="">
+                    <div class="row px-4 mt-4">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="search_name">
+                            Tên sản phẩm:
+                          </label>
+                          <input type="text" class="form-control" id="search_name" name="search_name"
+                            placeholder="Nhập tên sản phẩm">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="prd_brand">
+                            Thương hiệu
+                          </label>
+                          <select class="form-control" id="prd_brand" name="prd_brand">
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="prd_cate">
+                            Danh mục
+                          </label>
+                          <select class="form-control" id="prd_cate" name="prd_cate">
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-12 text-right">
+                        <button class="btn btn-primary m-0" id="filter_btn" type="submit">Lọc sản phẩm</button>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="card-body table-border-style">
+                    <div class="table-responsive">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Thương hiệu</th>
+                            <th>Danh mục</th>
+                            <th>Ảnh xem trước</th>
+                            <th>Hành động</th>
+                          </tr>
+                        </thead>
+                        <tbody id="product_show">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ stiped-table ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="/js/allProduct.js"></script>

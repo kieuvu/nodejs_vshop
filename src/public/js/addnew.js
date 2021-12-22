@@ -1,3 +1,71 @@
+$(document).ready(function () {
+  // Init
+  getCateBrand();
+
+  // Function
+  function getCateBrand() {
+    $.ajax({
+      type: "GET",
+      url: "/admin/product/catebrand/getall",
+      success: function (response) {
+        const categories = response.categories;
+        const brands = response.brands;
+
+        $("#prd_cate").html('');
+        $("#prd_brand").html('');
+
+        $("#prd_brand").append(`<option value=''></option>`);
+        $("#prd_cate").append(`<option value=''></option>`);
+
+        $.each(categories, function (index, item) {
+          $("#prd_cate").append(
+            `
+              <option value='${item.cate_slug}'>${item.cate_name}</option>
+            `
+          );
+        });
+
+        $.each(brands, function (index, item) {
+          $("#prd_brand").append(
+            `
+              <option value='${item.brand_slug}'>${item.brand_name}</option>
+            `
+          );
+        });
+
+      }
+    });
+  }
+
+  $("#add_prdForm").submit(function (e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+
+    $.ajax({
+      url: '/admin/product/add',
+      type: 'POST',
+      data: formData,
+      success: function (data) {
+        if (!data.err) {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Thêm thành công !!!',
+            timerProgressBar: true,
+            timer: 1500
+          }).then(function () {
+            location.reload();
+          });
+        }
+      },
+      cache: false,
+      contentType: false,
+      processData: false
+    });
+  });
+
+});
+
 let myEditor;
 ClassicEditor
   .create(document.querySelector('#prd_desc'))

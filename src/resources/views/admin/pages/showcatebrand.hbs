@@ -1,0 +1,191 @@
+<div class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="main-body">
+          <div class="page-wrapper">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+              <div class="page-block">
+                <div class="row align-items-center">
+                  <div class="col-md-12">
+                    <div class="page-header-title">
+                      <h5 class="m-b-10">Quản lý danh mục, thương hiệu sản phẩm</h5>
+                    </div>
+                    <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                      <li class="breadcrumb-item"><a href="#!">Form Components</a></li>
+                      <li class="breadcrumb-item"><a href="#!">Form Elements</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <div class="row">
+              <!-- [ form-element ] start -->
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5>Thêm danh mục, thương hiệu</h5>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <form action="/admin/product/catebrand/" id="cate_add" method="POST">
+                          <div class="form-group">
+                            <label for="cate_name">
+                              Tên danh mục:
+                            </label>
+                            <input required type="text" class="form-control" id="cate_name" name="cate_name"
+                              placeholder="Nhập tên danh mục">
+                          </div>
+                          <button class="btn btn-primary" id="cate_submit">Thêm</button>
+                        </form>
+                      </div>
+                      <div class="d-md-none d-block col-12" style="height:10px;"></div>
+                      <div class="col-md-6">
+                        <form action="/admin/product/catebrand/" id="brand_add" method="POST">
+                          <div class="form-group">
+                            <label for="brand_name">
+                              Tên thương hiệu:
+                            </label>
+                            <input required type="text" class="form-control" id="brand_name" name="brand_name"
+                              placeholder="Nhập tên thương hiệu">
+                          </div>
+                          <button class="btn btn-primary" id="brand_submit">Thêm</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5>Tất cả danh mục</h5>
+                    <hr>
+                    <div class="row">
+                      <div class="card-body table-border-style">
+                        <div class="table-responsive">
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Tên danh mục</th>
+                                <th>Hành động</th>
+                              </tr>
+                            </thead>
+                            <tbody id="cate_show">
+                              {{!-- {{#each categories }}
+                              <tr>
+                                <td>{{increaseNum @index 1}}</td>
+                                <td>{{this.cate_name}}</td>
+                                <td>
+                                  <button data-id="{{this.cate_slug}}" data-target="cate"
+                                    class="btn btn-warning delbtn">Xóa</button>
+                                </td>
+                              </tr>
+                              {{/each}} --}}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5>Tất cả thương hiệu</h5>
+                    <hr>
+                    <div class="row">
+                      <div class="card-body table-border-style">
+                        <div class="table-responsive">
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Tên Thương hiệu</th>
+                                <th>Hành động</th>
+                              </tr>
+                            </thead>
+                            <tbody id="brand_show">
+                              {{!-- {{#each brands }}
+                              <tr>
+                                <td>{{increaseNum @index 1}}</td>
+                                <td>{{this.brand_name}}</td>
+                                <td>
+                                  <button data-id="{{this.brand_slug}}" data-target="brand"
+                                    class="btn btn-warning delbtn">Xóa</button>
+                                </td>
+                              </tr>
+                              {{/each}} --}}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [ form-element ] end -->
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="/js/catebrand.js"></script>
+
+{{#if stt}}
+<script>
+  if (!{{ stt.err }}) {
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Thành công!!!',
+      ConfirmButton: false,
+      timerProgressBar: true,
+      timer: 1200
+    }).then(function () {
+      window.location.href = '/admin/product/catebrand';
+    })
+  }
+</script>
+{{/if}}
+
+{{#if cate_err}}
+<script>
+  Swal.fire({
+    position: 'center',
+    icon: 'error',
+    title: '{{cate_err}}',
+    ConfirmButton: false,
+    timerProgressBar: true,
+    timer: 2000
+  }).then(function () {
+    window.location.href = '/admin/product/catebrand';
+  })
+</script>
+{{/if}}
+
+{{#if brand_err}}
+<script>
+  Swal.fire({
+    position: 'center',
+    icon: 'error',
+    title: '{{brand_err}}',
+    ConfirmButton: false,
+    timerProgressBar: true,
+    timer: 2000
+  }).then(function () {
+    window.location.href = '/admin/product/catebrand/';
+  })
+</script>
+{{/if}}

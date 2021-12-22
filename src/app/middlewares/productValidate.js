@@ -3,13 +3,12 @@ const Product = require('../models/product.model');
 
 class ProductValidate {
 
-  //[POST]
   getProductId(req, res, next) {
     async function getProductId() {
       let newID = randomID(10);
 
       await Product.findOne({ prd_id: newID })
-        .then(function (data) {
+        .then((data) => {
           if (data) {
             getProductId();
           } else {

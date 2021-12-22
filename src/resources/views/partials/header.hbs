@@ -1,0 +1,42 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-7 d-flex align-items-center" id="header__top--info" style="height: 40px">
+        <div id="header__top--info--mail">
+          <i class="bx bx-mail-send"></i>
+          <span>kieuvuvuvu@gmail.com</span>
+        </div>
+        <div id="header__top--info--phone">
+          <i class="bx bx-phone"></i>
+          <span>+(84)-353-795-440</span>
+        </div>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end" id="header__top--user" style="height: 40px">
+        {{#unless currentUser}}
+        <a href="/login" id="header__top--user--login" class="d-flex align-items-center text-dark no-under h-100">
+          <i class="d-block mr-1 bx bx-log-in"></i>
+          Đăng nhập
+        </a>
+        <a href="/register" id="header__top--user--register" class="d-flex align-items-center text-dark no-under h-100">
+          <i class="d-block mr-1 bx bx-user-plus"></i>
+          Đăng ký
+        </a>
+        {{/unless}}
+
+        {{#if currentUser}}
+        <div class="header__top--user--info nav-item dropdown">
+          <div class="nav-link dropdown-toggle d-flex align-items-center" style="height: 40px"
+            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="bx bx-user-circle"></i>
+            <span class="d-block ml-1">{{currentUser.username}}</span>
+          </div>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Cài đặt tài khoản</a>
+            <a class="dropdown-item" href="/logout">Đăng xuất</a>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</header

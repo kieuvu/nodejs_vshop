@@ -1,0 +1,69 @@
+<div id="login" class="d-flex align-items-center" style="height: calc(100vh - 40px)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto" style=" max-width:600px">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">ĐĂNG NHẬP</h5>
+            <form method="POST" action="/login/auth">
+
+              {{#if err.all}}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> {{err.all}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              {{/if}}
+
+              <div class="form-floating mb-3">
+                <label for="floatingInputUsername">Tên đăng nhập:</label>
+                <input type="text" class="form-control" id="floatingInputUsername" placeholder="Nhập tên tài khoản !"
+                  name="username" required autofocus />
+              </div>
+
+              {{#if err.username}}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> {{err.username}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              {{/if}}
+
+              <hr />
+
+              <div class="form-floating mb-3">
+                <label for="floatingPassword">Mật khẩu:</label>
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Nhập mật khẩu !"
+                  name="password" required />
+              </div>
+
+              {{#if err.password}}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> {{err.password}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              {{/if}}
+
+              <div class="d-grid mb-2 text-right">
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit"
+                  style="font-size:14px">
+                  Đăng nhập
+                </button>
+              </div>
+
+              <hr class="my-4" />
+
+              <a class="d-block text-center mt-2 small" href="#">Chưa có tải khoản? Bấm vào đây để đăng ký.</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./js/checkCookie.js"></script>

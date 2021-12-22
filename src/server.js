@@ -1,14 +1,15 @@
 /**
- * @Author_KieuVu Nodejs.v15
+ * @Author_KieuVu   Nodejs.v15
+ * @Design_Pattern  Model - View - Controller
  */
 
 const express = require('express');
 const routeMatching = require("./routes");
-const db = require('./ultis/db');
 const { engine } = require('express-handlebars');
-const path = require('path');
-const env = require('dotenv');
 const cookieParser = require('cookie-parser');
+const path = require('path');
+const db = require('./ultis/db');
+const env = require('dotenv');
 
 //Start server
 const app = express();
@@ -36,6 +37,7 @@ app.engine('hbs', engine({
   layoutsDir: path.join(__dirname + "/resources/views/layouts"),
   partialsDir: [path.join(__dirname + "/resources/views/partials"),],
 }));
+
 app.set('view engine', 'hbs');
 app.set("views", path.join(__dirname + "/resources/views"));
 

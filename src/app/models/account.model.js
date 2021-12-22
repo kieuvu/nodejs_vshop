@@ -6,10 +6,12 @@ const Account = new Schema({
     type: String,
     minlength: 8,
     unique: true,
+    required: true,
   },
   password: {
     type: String,
     minlength: 8,
+    required: true,
   },
   userperm: {
     type: Number,

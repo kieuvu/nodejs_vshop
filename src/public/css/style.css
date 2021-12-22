@@ -1,0 +1,60 @@
+/* Font */
+
+/* Base Config */
+#main {
+  min-height: 100vh;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+a.no-under:hover {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Top Header */
+#header__top {
+  border-bottom: 1px solid rgb(240, 240, 240);
+  height: 40px;
+}
+
+#header__top--info--mail,
+#header__top--info--phone {
+  margin-right: 10px;
+}
+
+#header__top--info--mail i,
+#header__top--info--phone i {
+  position: relative;
+  top: 2px;
+}
+
+#header__top--info--mail span,
+#header__top--info--phone span {
+  font-size: 15px;
+}
+
+#header__top--user > a,
+#header__top--user > div {
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+#header__top--user > a:hover {
+  background: rgb(240, 240, 240);
+  cursor: pointer;
+}
+
+#header__top--user > div:hover {
+  cursor: pointer;
+}
+/* Footer */
+
+/* Register */
