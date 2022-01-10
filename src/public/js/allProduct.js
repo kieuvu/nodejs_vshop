@@ -30,6 +30,21 @@ $(document).ready(function () {
   });
 
   // Function
+  function pagin(data) {
+    $('#pagin').pagination({
+      dataSource: data,
+      pageSize: 10,
+      callback: function (data, pagination) {
+        currentPage = pagination.pageNumber;
+        renderData(data);
+      }
+    });
+  }
+
+  function scroolTop() {
+    $("html, body").animate({ scrollTop: 0 }, 100);
+  }
+
   function getCateBrand() {
     $.ajax({
       type: "GET",
@@ -68,6 +83,9 @@ $(document).ready(function () {
     const search = $.trim($("#search_name").val());
     const brand = $("#prd_brand").val();
     const cate = $("#prd_cate").val();
+    const trend = $('#prd_trend').val();
+
+    console.log($('#prd_trend').val());
 
     $.ajax({
       type: "GET",
@@ -75,10 +93,11 @@ $(document).ready(function () {
       data: {
         search_name: search,
         prd_brand: brand,
-        prd_cate: cate
+        prd_cate: cate,
+        is_Trending: trend
       },
       success: function (response) {
-        renderData(response);
+        pagin(response);
       }
     });
   }
@@ -86,16 +105,37 @@ $(document).ready(function () {
   function renderData(data) {
     $("#product_show").html("");
 
+    if (data.length == 0) {
+      $("#product_show").append(
+        `
+          <tr>
+            <td colspan="9">
+              <div class ="text-center">
+                Chưa có sản phẩm nào.
+              </div>
+            </td>
+          </tr>
+        `
+      );
+    }
+
     $.each(data, function (index, item) {
       $("#product_show").append(
         `
         <tr>
-          <td>${index + 1}</td>
           <td>
-            <a href="">${item.prd_name}</a>
+            <a href="/product/${item.prd_id}">${item.prd_name}</a>
           </td>
-          <td>${priceFormat(item.prd_price)}</td>
+          <td>
+            ${(item.prd_priceSaled > 0) ? `
+            <span><del style="font-size:13px;" class="text-muted d-block">${priceFormat(item.prd_price)}</del></span>
+            <span style="color:red;">${priceFormat(item.prd_priceSaled)}</span>
+          ` : `
+            <span style="color:red;">${priceFormat(item.prd_price)}</span>
+          `}
+          </td>
           <td>${item.prd_quantity}</td>
+          <td>${(item.prd_isTrending == 1) ? "Đang HOT" : "Không HOT"}</td>
           <td>${item.prd_brand}</td>
           <td>${item.prd_cate}</td>
           <td>
@@ -110,6 +150,7 @@ $(document).ready(function () {
         `
       );
     });
+    scroolTop();
   }
 
   function deleteProduct(id) {
@@ -134,4 +175,4 @@ $(document).ready(function () {
       }
     });
   }
-});
+})

@@ -23,6 +23,13 @@ $(document).ready(function () {
 
   function renderData(data) {
     getCateBrand();
+    $("#prd_isTrending").html("");
+    $("#prd_isTrending").append(
+      `
+        <option value="0"${(data.prd_isTrending == 0) ? "selected" : ""}> Không HOT</option >
+        <option value="1"${(data.prd_isTrending == 1) ? "selected" : ""}> Đang HOT</option >
+      `
+    );
     $("#prd_name").val(data.prd_name);
     $("#prd_quantity").val(data.prd_quantity);
     $("#prd_price").val(data.prd_price);
@@ -35,6 +42,10 @@ $(document).ready(function () {
     $("#prd_camera").val(data.prd_camera);
     $("#prd_battery").val(data.prd_battery);
     $("#prd_gcard").val(data.prd_gcard);
+    $("#prd_weight").val(data.prd_weight);
+    $("#prd_size").val(data.prd_size);
+    $("#prd_date").val(data.prd_date);
+    $("#prd_material").val(data.prd_material);
     $("#img_preview-img1").attr("src", `/uploads/img/${data.prd_id}`);
     $("#img_preview-img2").attr("src", `/uploads/img/${data.prd_id}_1`);
     $("#img_preview-img3").attr("src", `/uploads/img/${data.prd_id}_2`);
@@ -59,7 +70,7 @@ $(document).ready(function () {
         $.each(categories, function (index, item) {
           $("#prd_cate").append(
             `
-              <option ${(data.prd_cate == item.cate_slug) ? "selected" : ""} value='${item.cate_slug}'>${item.cate_name}</option>
+              <option ${(data.prd_cate == item.cate_slug) ? "selected" : ""} value='${item.cate_slug}' > ${item.cate_name}</ >
             `
           );
         });
@@ -67,7 +78,7 @@ $(document).ready(function () {
         $.each(brands, function (index, item) {
           $("#prd_brand").append(
             `
-              <option ${(data.prd_brand == item.brand_slug) ? "selected" : ""} value='${item.brand_slug}'>${item.brand_name}</option>
+              <option ${(data.prd_brand == item.brand_slug) ? "selected" : ""} value ='${item.brand_slug}'> ${item.brand_name}</option>
             `
           );
         });

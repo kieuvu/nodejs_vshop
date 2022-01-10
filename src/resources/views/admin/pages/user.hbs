@@ -10,7 +10,7 @@
                 <div class="row align-items-center">
                   <div class="col-md-12">
                     <div class="page-header-title">
-                      <h5 class="m-b-10">Quản lý sản phẩm</h5>
+                      <h5 class="m-b-10">Quản lý tài khoản</h5>
                     </div>
                     <ul class="breadcrumb">
                       <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
@@ -28,51 +28,34 @@
               <div class="col-xl-12">
                 <div class="card">
                   <div class="card-header">
-                    <h5>Tất cả sản phẩm</h5>
+                    <h5>Tất cả tài khoản</h5>
                   </div>
                   <form action="">
                     <div class="row px-4 mt-4">
-                      <div class="col-md-3">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label for="search_name">
-                            Tên sản phẩm:
+                            Tên tài khoản:
                           </label>
                           <input type="text" class="form-control" id="search_name" name="search_name"
-                            placeholder="Nhập tên sản phẩm">
+                            placeholder="Nhập tên tài khoản">
                         </div>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-md-6">
                         <div class="form-group">
-                          <label for="prd_brand">
-                            Thương hiệu:
+                          <label for="userperm">
+                            Cấp
                           </label>
-                          <select class="form-control" id="prd_brand" data-live-search="true" name="prd_brand">
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label for="prd_cate">
-                            Danh mục:
-                          </label>
-                          <select class="form-control" id="prd_cate" data-live-search="true" name="prd_cate">
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label for="prd_trend">
-                            Tình trạng:
-                          </label>
-                          <select class="form-control" id="prd_trend" name="prd_trend">
+                          <select class="form-control" id="userperm" data-live-search="true" name="userperm">
                             <option value="all">Tất cả</option>
-                            <option value="0">Không HOT</option>
-                            <option value="1">Đang HOT</option>
+                            <option value="1">Admin</option>
+                            <option value="2">Nhân viên</option>
+                            <option value="3">Khách hàng</option>
                           </select>
                         </div>
                       </div>
                       <div class="col-12 text-right">
-                        <button class="btn btn-primary m-0" id="filter_btn" type="submit">Lọc sản phẩm</button>
+                        <button class="btn btn-primary m-0" id="filter_btn" type="submit">Lọc tài khoản</button>
                       </div>
                     </div>
                   </form>
@@ -81,17 +64,13 @@
                       <table class="table table-striped">
                         <thead>
                           <tr>
-                            <th>Tên sản phẩm</th>
-                            <th>Giá</th>
-                            <th>Số lượng</th>
-                            <th>Tình trạng</th>
-                            <th>Thương hiệu</th>
-                            <th>Danh mục</th>
-                            <th>Ảnh xem trước</th>
+                            <th>Tên tài khoản</th>
+                            <th>Cấp</th>
+                            <th>Thời gian đăng ký</th>
                             <th>Hành động</th>
                           </tr>
                         </thead>
-                        <tbody id="product_show">
+                        <tbody id="user_show">
                         </tbody>
                       </table>
                     </div>
@@ -109,4 +88,4 @@
   </div>
 </section>
 
-<script src="/js/allProduct.js"></script>
+<script src="/js/user.js"></script>

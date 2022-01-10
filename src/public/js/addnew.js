@@ -32,7 +32,6 @@ $(document).ready(function () {
             `
           );
         });
-
       }
     });
   }
@@ -63,7 +62,6 @@ $(document).ready(function () {
       processData: false
     });
   });
-
 });
 
 let myEditor;

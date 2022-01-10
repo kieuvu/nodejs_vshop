@@ -4,4 +4,47 @@ input[type="file"] {
 
 .btn {
   cursor: pointer;
+  margin: 0;
+}
+
+/* Pagination */
+#pagin {
+  display: flex;
+  justify-content: center;
+}
+
+#pagin .paginationjs .paginationjs-pages ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+#pagin .paginationjs .paginationjs-pages ul li {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#pagin .paginationjs .paginationjs-pages ul li:first-child {
+  border-left: 2px solid #007bff;
+  border-radius: 3px 0 0 3px;
+}
+
+#pagin .paginationjs .paginationjs-pages ul li:last-child {
+  border-radius: 0 3px 3px 0;
+  border-right: 2px solid #007bff;
+}
+
+#pagin .paginationjs .paginationjs-pages ul li a {
+  display: block;
+}
+
+#pagin .paginationjs .paginationjs-pages ul li.active {
+  color: white;
+  background: #007bff;
 }

@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const { trim_all } = require('request_trimmer');
 
 const dashboardController = require("../../app/controllers/admin/DashboardController");
 const productController = require("../../app/controllers/admin/ProductController");
 const cateBrandController = require('../../app/controllers/admin/CateBrandController');
+const userController = require('../../app/controllers/admin/UserController');
 
 const productValidate = require('../../app/middlewares/productValidate');
 const checkCateBrand = require('../../app/middlewares/checkCateBrand');
@@ -36,10 +38,10 @@ router.get('/product/getproduct', productController.getProduct);
 router.get('/product/edit/:id', productController.edit);
 
 // API: Create New Product
-router.post('/product/add', imageUpload, productValidate.getProductId, productController.add);
+router.post('/product/add', imageUpload, trim_all, productValidate.getProductId, productController.add);
 
 // API: Create Update Product
-router.patch('/product/update', imageUpload, productController.updateProduct);
+router.patch('/product/update', imageUpload, trim_all, productController.updateProduct);
 
 // API: Delete Product
 router.delete('/product/delete', productController.delete);
@@ -58,5 +60,20 @@ router.post('/product/catebrand/add', checkCateBrand.exist, cateBrandController.
 // API: Delete Category or Brand
 router.delete('/product/catebrand/delete', cateBrandController.delete);
 
+/**@User DONE */
+
+// Show User Page
+router.get('/user', userController.index);
+
+// API: Get All User
+router.get('/user/get', trim_all, userController.getUser);
+
+// API: Delete User
+router.delete('/user/delete', userController.deleteUser);
+
+// API: Update User
+router.patch('/user/update', userController.updateUser);
+
+/**@Post */
 
 module.exports = router;

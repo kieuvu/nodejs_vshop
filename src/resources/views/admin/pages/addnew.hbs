@@ -29,7 +29,17 @@
                 <div class="col-sm-12">
                   <div class="card">
                     <div class="card-body">
-                      <h5>Điền đầy đủ thông tin</h5>
+                      <div class="row">
+                        <div class="col-10">
+                          <h5>Điền đầy đủ thông tin</h5>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end">
+                          <select style="width: 200px;" class="form-control" id="prd_isTrending" name="prd_isTrending">
+                            <option value="0">Không HOT</option>
+                            <option value="1">Đang HOT</option>
+                          </select>
+                        </div>
+                      </div>
                       <hr>
                       <label style="color: black;font-size:16px;">
                         * Thông tin mặt hàng:
@@ -69,14 +79,15 @@
                             <label for="prd_brand">
                               4.Thương hiệu:
                             </label>
-                            <select required class="form-control" id="prd_brand" name="prd_brand">
+                            <select required class="form-control" data-live-search="true" id="prd_brand"
+                              name="prd_brand">
                             </select>
                           </div>
                           <div class="form-group">
                             <label for="prd_cate">
                               5.Danh mục:
                             </label>
-                            <select required class="form-control" id="prd_cate" name="prd_cate">
+                            <select required class="form-control" data-live-search="true" id="prd_cate" name="prd_cate">
                             </select>
                           </div>
                         </div>
@@ -212,6 +223,42 @@
                                 </label>
                                 <input type="text" class="form-control" id="prd_gcard"
                                   placeholder="Nhập tên Card đồ họa" name="prd_gcard">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="prd_weight">
+                                  7.9 Trọng lượng (kg):
+                                </label>
+                                <input type="number" step="0.1" class="form-control" id="prd_weight"
+                                  placeholder="Nhập trọng lượng sản phẩm" name="prd_weight">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="prd_size">
+                                  7.10 Kích thước:
+                                </label>
+                                <input type="text" class="form-control" id="prd_size"
+                                  placeholder="Nhập kích thước sản phẩm" name="prd_size">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="prd_date">
+                                  7.11 Năm sản suất:
+                                </label>
+                                <input type="number" class="form-control" id="prd_date" placeholder="Nhập năm sản xuất"
+                                  name="prd_date">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="prd_material">
+                                  7.12 Chất liệu:
+                                </label>
+                                <input type="text" class="form-control" id="prd_material"
+                                  placeholder="Nhập chất liệu sản phẩm" name="prd_material">
                               </div>
                             </div>
                           </div>

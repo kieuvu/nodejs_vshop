@@ -58,6 +58,26 @@ const Product = new Schema({
   prd_gcard: {
     type: String,
   },
+  prd_weight: {
+    type: Number,
+  },
+  prd_size: {
+    type: String,
+  },
+  prd_date: {
+    type: Number,
+  },
+  prd_material: {
+    type: String,
+  },
+  prd_isTrending: {
+    type: Number,
+    default: 0
+  },
+  sold: {
+    type: Number,
+    default: 0,
+  }
 }, {
   timestamps: true,
 });

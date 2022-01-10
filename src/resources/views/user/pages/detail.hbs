@@ -1,0 +1,169 @@
+<div class="container">
+  <nav aria-label="breadcrumb" style="background-color: white;">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">VShop</a></li>
+      <li class="breadcrumb-item"><a href="/product">Sản phẩm</a></li>
+      <li id="breadcrumbName" class="breadcrumb-item active" aria-current="page"></li>
+    </ol>
+  </nav>
+  <div class="row">
+    <div class="col-lg-5 mb-3">
+      <div id="main_img" style="
+              position: relative;
+              width: 100%;
+              padding-top:100%;
+              ">
+        <img id="bigImg" alt="" class="img-thumbnail d-block" style="
+                position:absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                object-fit:contain;
+         ">
+      </div>
+      <div id="relative_img" class=" mt-2 d-flex justify-content-between align-content-stretch flex-nowrap">
+        <div style="
+              position: relative;
+              width: 24%;
+              padding-top:24%;
+              ">
+          <img id="relImg_1" alt="" class="img-thumbnail d-block" style="
+            position:absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+            cursor:pointer;
+            ">
+        </div>
+        <div style="
+              position: relative;
+              width: 24%;
+              padding-top:24%;
+              ">
+          <img id="relImg_2" alt="" class="img-thumbnail d-block" style="
+            position:absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+            cursor:pointer;
+            ">
+        </div>
+        <div style="
+              position: relative;
+              width: 24%;
+              padding-top:24%;
+              ">
+          <img id="relImg_3" alt="" class="img-thumbnail d-block" style="
+            position:absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+            cursor:pointer;
+            ">
+        </div>
+        <div style="
+              position: relative;
+              width: 24%;
+              padding-top:24%;
+              ">
+          <img id="relImg_4" alt="" class="img-thumbnail d-block" style="
+            position:absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+            cursor:pointer;
+            ">
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-7">
+      <h5 id="prd_name"></h5>
+      <table>
+        <tr>
+          <th style="font-weight: normal;min-width:110px;">Giá sản phẩm</th>
+          <td class="pr-1">:</td>
+          <td id="prd_price"></td>
+        </tr>
+        <tr>
+          <th style="font-weight: normal;min-width:110px;">Tình trạng</th>
+          <td class="pr-1">:</td>
+          <td id="prd_quantity"></td>
+        </tr>
+        <tr>
+          <th style="font-weight: normal;min-width:110px;">Thương hiệu</th>
+          <td class="pr-1">:</td>
+          <td id="prd_brand"></td>
+        </tr>
+        <tr>
+          <th style="font-weight: normal;min-width:110px;">Phân loại</th>
+          <td class="pr-1">:</td>
+          <td id="prd_cate"></td>
+        </tr>
+      </table>
+      <hr>
+      <span class="text-muted mb-1 d-block">Thông tin sản phẩm:</span>
+      <table id="detailSpec"></table>
+      <hr>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="product_order" id="buy_now">
+            <span class="d-block font-weight-bold">Mua ngay</span>
+            <span class="d-block">Giao hàng tận nhà</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="product_order" id="add_cart">
+            <span class="d-block font-weight-bold">Thêm vào giỏ</span>
+            <span class="d-block">Tiếp tục mua sắm</span>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="product_order px-2" id="need_help">
+            <span class="d-block text-secondary">Cần hỗ trợ? Để lại số điện thoại hoặc email !</span>
+            <div>
+              <form action="" class="d-flex justify-content-between py-1 mt-2">
+                <input type="text" placeholder="Nhập thông tin liên hệ vào đây...">
+                <button type="submit" class="text-secondary">Xác nhận</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <hr>
+      <div class="text-muted" style="font-size: 19px;">Chi tiết sản phẩm</div>
+      <div id="prd_desc" class="inactive">
+      </div>
+      <div id="readmore" class="btn btn-primary ">Đọc tiếp...</div>
+      <div id="hidden" class="btn btn-primary hide">Rút Gọn</div>
+    </div>
+  </div>
+  <div class="home_section mt-3">
+    <div class="ribbon">
+      <span class="content">Sản phẩm liên quan</span>
+    </div>
+    <div class="home_owl-2 owl-carousel owl-theme" id="owlcarousel1">
+    </div>
+  </div>
+</div>
+<script src="/js/detail.js"></script>

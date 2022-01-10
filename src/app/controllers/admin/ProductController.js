@@ -9,14 +9,29 @@ class ProductController {
   }
 
   //[GET]
+  edit(req, res, next) {
+    res.render('admin/pages/editProduct', { layout: "admin" });
+  }
+
+  //[GET]
+  create(req, res, next) {
+    res.render("admin/pages/addnew", { layout: "admin" });
+  };
+
+  //[GET]
   async getProduct(req, res, next) {
     let query = [];
+    let sort = { createdAt: -1 };
+    let limit = 0;
 
     if (req.query.search_name) {
       let prd_name = req.query.search_name;
       if (prd_name.length > 0) {
         query.push({ 'prd_name': new RegExp(prd_name, 'i') });
       }
+    }
+    if (req.query.limit) {
+      let limit = req.query.limit;
     }
     if (req.query.prd_brand) {
       let prd_brand = req.query.prd_brand;
@@ -30,6 +45,13 @@ class ProductController {
         query.push({ prd_cate: prd_cate });
       }
     }
+    if (req.query.is_Trending) {
+      let prd_isTrending = req.query.is_Trending;
+      if (prd_isTrending != 'all') {
+        query.push({ prd_isTrending: prd_isTrending });
+        sort = { updatedAt: -1 };
+      }
+    }
     if (req.query.prd_id) {
       let prd_id = req.query.prd_id;
       if (prd_id.length > 0) {
@@ -37,18 +59,13 @@ class ProductController {
       }
     }
 
-    const finnal = { ...query[0], ...query[1], ...query[2], ...query[3] };
+    const filter = { ...query[0], ...query[1], ...query[2], ...query[3], ...query[4] };
 
-    await Product.find(finnal).sort({ prd_name: 1 })
+    await Product.find(filter).sort({ ...sort }).limit(limit)
       .then((products) => {
         res.json(products);
       });
   }
-
-  //[GET]
-  create(req, res, next) {
-    res.render("admin/pages/addnew", { layout: "admin" });
-  };
 
   //[POST]
   async add(req, res, next) {
@@ -59,13 +76,15 @@ class ProductController {
     const { prd_name, prd_id, prd_desc, prd_price,
       prd_cate, prd_brand, prd_quantity, prd_chip,
       prd_ram, prd_rom, prd_display, prd_os,
-      prd_camera, prd_battery, prd_gcard } = req.body;
+      prd_camera, prd_battery, prd_gcard,
+      prd_weight, prd_size, prd_date, prd_material, prd_isTrending } = req.body;
 
     const newProduct = new Product({
       prd_name, prd_id, prd_desc, prd_price, prd_cate,
       prd_brand, prd_quantity, prd_chip, prd_ram,
       prd_rom, prd_display, prd_os, prd_camera,
-      prd_battery, prd_gcard,
+      prd_battery, prd_gcard, prd_weight, prd_size,
+      prd_date, prd_material, prd_isTrending
     });
 
     await newProduct.save()
@@ -107,11 +126,6 @@ class ProductController {
       });
   };
 
-  //[GET]
-  edit(req, res, next) {
-    res.render('admin/pages/editProduct', { layout: "admin" });
-  }
-
   //[PATCH]
   async updateProduct(req, res, next) {
     const stt = {
@@ -123,7 +137,8 @@ class ProductController {
     const { prd_name, prd_id, prd_priceSaled, prd_desc, prd_price,
       prd_cate, prd_brand, prd_quantity, prd_chip,
       prd_ram, prd_rom, prd_display, prd_os,
-      prd_camera, prd_battery, prd_gcard, } = req.body;
+      prd_camera, prd_battery, prd_gcard,
+      prd_weight, prd_size, prd_date, prd_material, prd_isTrending } = req.body;
 
     await Product.updateOne(
       { prd_id: prd_id },
@@ -131,7 +146,7 @@ class ProductController {
         prd_name, prd_id, prd_priceSaled, prd_desc, prd_price,
         prd_cate, prd_brand, prd_quantity, prd_chip, prd_ram,
         prd_rom, prd_display, prd_os, prd_camera,
-        prd_battery, prd_gcard,
+        prd_battery, prd_gcard, prd_weight, prd_size, prd_date, prd_material, prd_isTrending
       }
     )
       .then(() => {
@@ -148,7 +163,6 @@ class ProductController {
               });
             });
           }
-
           for (let obj in req.files) {
             if (typeof req.files[obj] !== 'undefined') {
               await fsprm.unlink(`./src/public/uploads/img/${prd_id}${(index == 0) ? "" : "_" + index}`);
@@ -159,14 +173,11 @@ class ProductController {
             index++;
           }
         })();
-
         res.json(stt);
-
       })
       .catch(() => {
         stt.err = true;
       });
-
   }
 
   //[DELETE]

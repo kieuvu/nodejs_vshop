@@ -5,3 +5,9 @@ function priceFormat(price) {
   });
   return fmt.format(price);
 }
+
+$(document).ready(function () {
+  $(window).on('load', function () {
+    $('select').selectpicker();
+  });
+});

@@ -10,13 +10,13 @@ class PreventAccess {
 
   admin(req, res, next) {
     if (res.locals.currentUser) {
-      if (res.locals.currentUser.userperm == 1) {
+      if (res.locals.currentUser.userperm == 1 || res.locals.currentUser.userperm == 2) {
         next();
       } else {
-        res.redirect('back');
+        res.redirect('/');
       }
     } else {
-      res.redirect('back');
+      res.redirect('/');
     }
   }
 }

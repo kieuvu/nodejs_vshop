@@ -1,42 +1,101 @@
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-7 d-flex align-items-center" id="header__top--info" style="height: 40px">
-        <div id="header__top--info--mail">
-          <i class="bx bx-mail-send"></i>
-          <span>kieuvuvuvu@gmail.com</span>
+<header class="d-none d-md-block">
+  <div style="background-color:rgb(0, 0, 0); color :white; ">
+    <div class="container">
+      <div class="row">
+        <div class="col-7 d-flex align-items-center" id="header__top--info" style="height: 40px">
+          <div id="header__top--info--mail">
+            <i class="bx bx-mail-send"></i>
+            <span>kieuvuvuvu@gmail.com</span>
+          </div>
+          <div id="header__top--info--phone">
+            <i class="bx bx-phone"></i>
+            <span>+(84)-353-795-440</span>
+          </div>
         </div>
-        <div id="header__top--info--phone">
-          <i class="bx bx-phone"></i>
-          <span>+(84)-353-795-440</span>
-        </div>
-      </div>
-      <div class="col-5 d-flex align-items-center justify-content-end" id="header__top--user" style="height: 40px">
-        {{#unless currentUser}}
-        <a href="/login" id="header__top--user--login" class="d-flex align-items-center text-dark no-under h-100">
-          <i class="d-block mr-1 bx bx-log-in"></i>
-          Đăng nhập
-        </a>
-        <a href="/register" id="header__top--user--register" class="d-flex align-items-center text-dark no-under h-100">
-          <i class="d-block mr-1 bx bx-user-plus"></i>
-          Đăng ký
-        </a>
-        {{/unless}}
+        <div class="col-5 d-flex align-items-center justify-content-end" id="header__top--user" style="height: 40px">
+          {{#unless currentUser}}
+          <a href="/login" id="header__top--user--login" class="d-flex align-items-center text-white no-under h-100">
+            <i class="d-block mr-1 bx bx-log-in"></i>
+            Đăng nhập
+          </a>
+          <a href="/register" id="header__top--user--register"
+            class="d-flex align-items-center text-white no-under h-100">
+            <i class="d-block mr-1 bx bx-user-plus"></i>
+            Đăng ký
+          </a>
+          {{/unless}}
 
-        {{#if currentUser}}
-        <div class="header__top--user--info nav-item dropdown">
-          <div class="nav-link dropdown-toggle d-flex align-items-center" style="height: 40px"
-            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-user-circle"></i>
-            <span class="d-block ml-1">{{currentUser.username}}</span>
+          {{#if currentUser}}
+          <div class="header__top--user--info nav-item dropdown pr-0">
+            <div class="nav-link dropdown-toggle d-flex align-items-center pr-0" style="height: 40px"
+              id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bx bx-user-circle"></i>
+              <span class="d-block ml-1">{{currentUser.username}}</span>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Cài đặt tài khoản</a>
+              <a class="dropdown-item" href="/logout">Đăng xuất</a>
+            </div>
+            {{/if}}
           </div>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Cài đặt tài khoản</a>
-            <a class="dropdown-item" href="/logout">Đăng xuất</a>
-          </div>
-          {{/if}}
         </div>
       </div>
     </div>
   </div>
-</header
+  <nav style="height: 100px; ">
+    <div class="container">
+      <div style="height: 100px;">
+        <div class="row">
+          <div class="col-3">
+            <div class="d-flex justify-content-start align-items-center" style="height:100px;">
+              <a href="/" class="no-under text-dark"
+                style="font-size: 50px; font-family: 'Rajdhani', sans-serif;">VShop.</a>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex justify-content-center align-items-center w-100" id="search_bar" style="height:100px;">
+              <div class="d-flex justify-content-end align-items-center w-100" style="height:100px;">
+                <div class="searchbar">
+                  <form>
+                    <input class="search_input" required type="text" name="search"
+                      placeholder="Nhập từ khóa cần tìm kiếm...">
+                    <button type="submit" class="search_icon"><i class='bx bx-search-alt'></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-end align-items-center " style="height: 100px;">
+              <div id="cart-icon"
+                style="border:2px solid #343a40; border-radius:5px; padding:5px 4px; position: relative;">
+                <a href="/product/cart" class="text-dark d-flex align-items-center no-under" style="font-size: 28px;">
+                  <i class='bx bxs-cart'></i>
+                  <span class="ml-2" style="font-size: 14px; font-weight :500;">Giỏ hàng
+                    <span style="position: absolute; top:-7px; right:-7px;" class="badge badge-dark"
+                      id="cart_badge_count"></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav id="pc_nav-cate" style="height:50px; background-color:rgb(245, 245, 245);">
+    <ul class="d-flex justify-content-center align-items-center" style="height: 50px; list-style:none;">
+      <li class="px-4"><a class="text-dark no-under" href="/product">Tất cả sản phẩm</a></li>
+      <li class="px-4"><a class="text-dark no-under" href="">Laptop</a></li>
+      <li class="px-4"><a class="text-dark no-under" href="">Phụ kiện</a></li>
+      <li class="px-4"><a class="text-dark no-under" href="">Linh kiện</a></li>
+      <li class="px-4 dropdown">
+        <a class="text-dark no-under" href="">Tất cả danh mục
+          <i style="position:relative;top:2px;" class='bx bx-chevron-down'></i>
+        </a>
+        <ul class="second_menu">
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>

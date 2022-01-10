@@ -1,0 +1,66 @@
+<div class="container">
+  <nav aria-label="breadcrumb" style="background-color: white;">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">VShop</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
+    </ol>
+  </nav>
+  <div style="min-height: calc(100vh - 190px - 64px);" class="d-flex align-items-center justify-content-center">
+    <div style="min-width: 100%;">
+      <div class="d-flex align-items-center">
+        <div class="card">
+          <div class="row">
+            <div class="col-md-8 cart">
+              <div class="title">
+                <div class="row">
+                  <div class="col">
+                    <h4><b>Giỏ hàng</b></h4>
+                  </div>
+                  <div class="col align-self-center text-right text-muted">Tổng:
+                    <span id="cart_count"></span> SP
+                  </div>
+                </div>
+              </div>
+              <div class="back-to-shop"><a href="/">&leftarrow; Trở về trang chủ</a></div>
+              <div id="cart_items">
+              </div>
+              <hr>
+            </div>
+            <div class="col-md-4 summary">
+              <form action="">
+                <div>
+                  <h5><b>Tiến hành thanh toán</b></h5>
+                </div>
+                <hr>
+                <form class="checkout_user_info">
+                  <p>ĐƠN VỊ VÂN CHUYỂN:<br>
+                    <small>
+                      <i>Free Ship Toàn Quốc</i>
+                    </small>
+                  </p>
+                  </p>
+                  <select>
+                    <option class="text-muted">J&#38T Express</option>
+                  </select>
+                  <p>TÊN KHÁCH HÀNG:<br><small><i>Họ và tên</i></small></p>
+                  <input id="customer_name" style="margin-bottom: 30px;">
+                  <p>SĐT KHÁCH HÀNG:<br><small><i>SĐT người mua</i></small></p>
+                  <input type="number" id="customer_phone" min="0" style="margin-bottom: 30px;">
+                  <p>ĐỊA CHỈ GIAO HÀNG:<br><small><i>Nhập chi tiết</i></small></p>
+                  <input id="customer_address" style="margin-bottom: 30px;">
+                  <p>GHI CHÚ:<br><small><i>Nếu có</i></small></p>
+                  <input id="customer_note">
+                </form>
+                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                  <div class="col">Tổng tiền:</div>
+                  <div class="col text-right" id="cart_total_price">0</div>
+                </div> <button class="btn" type="submit" id="checkoutBtn">Đặt hàng</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/cart.js"></script>

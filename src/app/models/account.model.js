@@ -15,7 +15,7 @@ const Account = new Schema({
   },
   userperm: {
     type: Number,
-    default: 0,
+    default: 3,
   },
 }, {
   timestamps: true,
