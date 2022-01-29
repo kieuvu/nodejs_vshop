@@ -1,0 +1,62 @@
+<div class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="main-body">
+          <div class="page-wrapper">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+              <div class="page-block">
+                <div class="row align-items-center">
+                  <div class="col-md-12">
+                    <div class="page-header-title">
+                      <h5 class="m-b-10">Sửa bài đăng</h5>
+                    </div>
+                    <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                      <li class="breadcrumb-item"><a href="#!">Form Components</a></li>
+                      <li class="breadcrumb-item"><a href="#!">Form Elements</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <div class="row">
+              <!-- [ form-element ] start -->
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Nội dung bài đăng</h5>
+                  </div>
+                  <div class="card-body">
+                    <form id="createForm">
+                      <div class="form-group">
+                        <label for="postTitle">Tiêu đề bài viết:</label>
+                        <input type="text" class="form-control" id="postTitle" name="postTitle" required
+                          placeholder="Nhập tiêu đề bài viết!">
+                      </div>
+                      <div class="form-group">
+                        <label for="postContent">Nội dung bài viết:</label>
+                        <textarea class="form-control" name="postContent" id="postContent" rows="3"></textarea>
+                      </div>
+                      <div class="text-right">
+                        <button class="btn btn-primary" id="edit">Sửa</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- [ form-element ] end -->
+              <!-- [ Main Content ] end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+<script src="/js/postEdit.js"></script>

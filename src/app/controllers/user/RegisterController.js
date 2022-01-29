@@ -37,6 +37,52 @@ class RegisterController {
         res.json(stt);
       });
   }
+
+  // [GET]
+  userEdit(req, res, next) {
+
+    res.render("user/pages/userEdit", { user: res.locals.currentUser.username });
+  }
+
+  // [POST]
+  async changePassword(req, res, next) {
+    const stt = {
+      err: false
+    };
+    const getUser = await Account.findOne({ username: res.locals.currentUser.username });
+    const checkOldPass = await bcrypt.compare(req.body.password, getUser.password);
+
+    if (!checkOldPass) {
+      stt.err = true;
+      stt.oldPass = false;
+      res.json(stt);
+    } else {
+      const passwordRegex = new RegExp(
+        "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{8,})"
+      );
+      if (!passwordRegex.test(req.body.newPassword)) {
+        stt.newPass = false;
+        stt.err = true;
+        res.json(stt);
+      } else if (req.body.newPassword != req.body.renewPass) {
+        stt.repass = false;
+        stt.err = true;
+        res.json(stt);
+      } else {
+        const hashedPassword = await bcrypt.hash(req.body.newPassword, 10);
+        await Account.findOneAndUpdate(
+          { username: res.locals.currentUser.username },
+          {
+            "$set": {
+              password: hashedPassword
+            }
+          }
+        );
+        res.json(stt);
+      }
+    }
+
+  }
 }
 
 module.exports = new RegisterController;

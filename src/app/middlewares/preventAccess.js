@@ -8,6 +8,14 @@ class PreventAccess {
     }
   }
 
+  requireSign(req, res, next) {
+    if (!res.locals.currentUser) {
+      res.redirect('/');
+    } else {
+      next();
+    }
+  }
+
   admin(req, res, next) {
     if (res.locals.currentUser) {
       if (res.locals.currentUser.userperm == 1 || res.locals.currentUser.userperm == 2) {

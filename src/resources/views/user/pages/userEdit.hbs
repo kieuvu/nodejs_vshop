@@ -1,0 +1,58 @@
+<div class="d-flex align-items-center" style="min-height: calc(100vh - 190px)">
+  <div class="container">
+    <nav aria-label="breadcrumb" style="background-color: white;">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">VShop</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cài đặt tài khoản</li>
+      </ol>
+    </nav>
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto" style=" max-width:600px">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-left mb-5 fw-light fs-5">ĐỔI MẬT KHẨU</h5>
+            <form>
+
+              <div class="form-floating mb-3">
+                <label for="floatingInputUsername">Tên đăng nhập:</label>
+                <input type="text" value="{{user}}" class="form-control" readonly name="username" required autofocus />
+              </div>
+              <div class="form-floating mb-3">
+                <label for="floatingPassword">Mật khẩu cũ:</label>
+                <input type="password" class="form-control" id="currentPass" placeholder="Nhập mật khẩu hiện tại!"
+                  name="password" required />
+              </div>
+              <hr />
+              <div class="form-floating mb-3">
+                <label for="floatingPassword">Mật khẩu mới:</label>
+                <input type="password" autocomplete="new-password" id="newPass" class="form-control"
+                  placeholder="Nhập mật khẩu mới!" name="newPassword" required />
+              </div>
+
+              <div class="form-floating mb-3">
+                <label for="floatingPassword">Xác nhận mật khẩu mới:</label>
+                <input type="password" id="renewPass" class="form-control" placeholder="Nhập lại mật khẩu mới!"
+                  name="renewPassword" required />
+              </div>
+
+              <div class="notif mb-3">
+                <small>
+                  <i>* Mật khẩu phải tối thiểu 8 ký tự, ít nhất 1 số, và 1 chữ hoa và 1 chữ thường !</i>
+                </small>
+              </div>
+
+              <div class="d-grid mb-2 text-right">
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" id="submit" type="submit"
+                  style="font-size:14px">
+                  Xác nhận
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./js/userEdit.js"></script>

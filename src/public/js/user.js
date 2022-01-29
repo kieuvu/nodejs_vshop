@@ -46,7 +46,6 @@ $(document).ready(function () {
           if (value != currentPerm) {
             Swal.fire({
               title: 'Có chắc chắn muốn thay đổi?',
-              text: "Lưu ý chọn đúng quyền!",
               icon: 'warning',
               showCancelButton: true,
               confirmButtonColor: '#3085d6',
@@ -96,7 +95,6 @@ $(document).ready(function () {
 
   function renderData(data) {
     $("#user_show").html("");
-
     if (data.length == 0) {
       $("#user_show").append(
         `
@@ -126,6 +124,8 @@ $(document).ready(function () {
         `
       );
     });
+
+    scroolTop();
   }
 
   function deleteUser(id) {
@@ -173,5 +173,9 @@ $(document).ready(function () {
         }
       }
     });
+  }
+
+  function scroolTop() {
+    $("html, body").animate({ scrollTop: 0 }, 100);
   }
 });

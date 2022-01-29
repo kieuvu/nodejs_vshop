@@ -11,6 +11,11 @@ class ProductController {
     res.render('user/pages/detail');
   }
 
+  // [GET]
+  search(req, res, next) {
+    res.render('user/pages/search');
+  }
+
 }
 
 module.exports = new ProductController;

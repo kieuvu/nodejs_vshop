@@ -1,38 +1,49 @@
 let cart_badge_count = 0;
+
 $(document).ready(function () {
-  // Init
-  getCate();
-  // Handle
+  //Init
+  backToTop();
 
-  // Function
-  function getCate() {
-    $.ajax({
-      type: "GET",
-      url: "/api/product/catebrand/getall",
-      success: function (response) {
-        const categories = response.categories;
+  $(document).on('click', "#backToTop button", function () {
+    $("html, body").animate({ scrollTop: 0 }, 100);
+  });
 
-        $("#pc_nav-cate .second_menu").html('');
+  $(document).on('scroll', window, function () {
+    const onScroll = window.scrollY;
+    if (onScroll >= 150) {
+      $("#backToTop").css('display', 'block');
+    } else {
+      $("#backToTop").css('display', 'none');
+    }
+  });
 
-        $.each(categories, function (index, item) {
-          $("#pc_nav-cate .second_menu").append(
-            `
-             <li class="px-4">
-              <a class="text-dark no-under" href="" >
-                ${item.cate_name}
-              </a>
-            </li>
-            `
-          );
-        });
-      }
+  //Handle
+  $(".updating").click(function (e) {
+    e.preventDefault();
+    Swal.fire({
+      position: 'center',
+      icon: 'info',
+      title: 'Chức năng đang được cập nhật !',
+      showConfirmButton: true,
+      timerProgressBar: true,
+      timer: 2500
     });
+  });
+
+  //Function
+  function backToTop() {
+    $('body').append(
+      `
+        <div id="backToTop">
+          <button><i class='bx bx-chevron-up'></i></button>
+        </div>
+      `
+    );
   }
 });
 
-
 function priceFormat(price) {
-  let fmt = new Intl.NumberFormat('en-US', {
+  let fmt = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
     currency: 'VND',
   });

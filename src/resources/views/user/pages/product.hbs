@@ -13,6 +13,18 @@
       </div>
     </div>
     <div class="col-8 col-lg-9">
+      <div class="row">
+        <div class="list-group-item disabled mb-1 text-right text-dark col-12 px-0" aria-disabled="true">
+          <div class="d-flex justify-content-end align-items-center">
+            <span>Sắp xếp:</span>
+            <select name="sord" class="mx-2 px-2" id="product_sort">
+              <option selected value="product_new">Mới nhất</option>
+              <option value="price_up">Giá tăng dần</option>
+              <option value="price_down">Giá giảm dần</option>
+            </select>
+          </div>
+        </div>
+      </div>
       <div class="row" id="show_product"></div>
       <div id="pagin" class="mt-5"></div>
     </div>

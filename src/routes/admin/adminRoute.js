@@ -6,6 +6,8 @@ const dashboardController = require("../../app/controllers/admin/DashboardContro
 const productController = require("../../app/controllers/admin/ProductController");
 const cateBrandController = require('../../app/controllers/admin/CateBrandController');
 const userController = require('../../app/controllers/admin/UserController');
+const orderedController = require("../../app/controllers/user/OrderedController");
+const postController = require('../../app/controllers/admin/PostController');
 
 const productValidate = require('../../app/middlewares/productValidate');
 const checkCateBrand = require('../../app/middlewares/checkCateBrand');
@@ -22,6 +24,7 @@ const imageUpload = require("../../ultis/product/multerConfig");
 
 // Show Dashboard Page
 router.get('/', dashboardController.index);
+router.get('/getAnalytics', dashboardController.getAnalytics);
 
 /**@Product DONE*/
 
@@ -74,6 +77,38 @@ router.delete('/user/delete', userController.deleteUser);
 // API: Update User
 router.patch('/user/update', userController.updateUser);
 
-/**@Post */
+/**@Ordered DONE*/
+
+// Show Ordered Page
+router.get('/ordered', orderedController.index);
+
+// API: Get All Ordered
+router.get('/ordered/getOrder', orderedController.getOrder);
+
+// API: Update Ordered State
+router.post('/ordered/updateState', orderedController.updateState);
+
+/**@POST DONE*/
+
+// Show All Post Page
+router.get('/post', postController.index);
+
+// Show Add New Post Page
+router.get('/post/create', postController.create);
+
+// API: Add New Post
+router.post('/post/create/add', postController.add);
+
+// API: Get All Post
+router.get('/post/getPost', postController.getAll);
+
+// Show Post Edit Page
+router.get('/post/edit/:id', postController.edit);
+
+// API: Update Post
+router.post('/post/update', postController.update);
+
+// API: Delete Post
+router.delete('/post/delete', postController.delete);
 
 module.exports = router;

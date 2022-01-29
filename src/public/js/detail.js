@@ -51,6 +51,30 @@ $(document).ready(function () {
         addToCart(items);
       }
     });
+
+    $('#buy_now').click(function (e) {
+      e.preventDefault();
+      if (prd_quantity == 0) {
+        Swal.fire({
+          position: 'center',
+          icon: 'warning',
+          title: 'Sản phẩm đang tạm hết hàng !',
+          showConfirmButton: false,
+          timerProgressBar: true,
+          timer: 1500
+        });
+      } else {
+        const items = [
+          {
+            'product_name': prd_name,
+            'product_id': prd_id,
+            'price': +prd_price,
+            'quantity': 1
+          }
+        ];
+        addToCart(items, true);
+      }
+    });
   });
   $(document).on('click', '#readmore', function () {
     $('#prd_desc').removeClass("inactive");
@@ -64,39 +88,29 @@ $(document).ready(function () {
   });
 
   // Function
-  function owl(section, items = 5, margin = 80) {
+  function owl(section, items = 5) {
     section.owlCarousel({
       loop: true,
       autoplay: true,
       autoplayTimeout: 2000,
       autoplayHoverPause: true,
-      margin: margin,
       items: items,
+      margin: 10,
       responsive: {
         0: {
           items: 2,
-          margin: 5,
-          center: true
         },
         480: {
           items: 2,
-          margin: 20,
-          center: true
         },
         768: {
-          items: 3,
-          margin: 5,
-          center: false,
+          items: 2,
         },
         1000: {
           items: 4,
-          margin: 5,
-          center: false,
         },
         1200: {
           items: 5,
-          margin: 5,
-          center: false,
         }
       }
     });
@@ -123,7 +137,7 @@ $(document).ready(function () {
       section.append(
         `
         <div class="item">
-          <div class="prd_card p-2 px-5 d-flex flex-column" style="width: 260px;">
+          <div class="prd_card d-flex flex-column">
             <div class="prd_card-img">
               <a class="d-block" href="/product/${item.prd_id}" style="position: relative;width: 100%;padding-top:66.6%;">
                 <img
@@ -323,7 +337,7 @@ $(document).ready(function () {
 
   }
 
-  function addToCart(items) {
+  function addToCart(items, redirect = false) {
     $.ajax({
       type: "POST",
       url: "/product/cart",
@@ -345,15 +359,19 @@ $(document).ready(function () {
             }
           });
           cartBadgeCount();
-          Toast.fire({
-            icon: 'success',
-            title: 'Đang thêm vào giỏ hàng...'
-          }).then(() => {
+          if (redirect) {
+            location.href = "/product/cart";
+          } else {
             Toast.fire({
               icon: 'success',
-              title: 'Thêm thành công !'
+              title: 'Đang thêm vào giỏ hàng...'
+            }).then(() => {
+              Toast.fire({
+                icon: 'success',
+                title: 'Thêm thành công !'
+              });
             });
-          });
+          }
         } else {
           if (response.err && !response.hasAccount) {
             Swal.fire({

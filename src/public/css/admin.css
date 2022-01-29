@@ -2,6 +2,14 @@ input[type="file"] {
   color: white;
 }
 
+.text-overfl-2line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
 .btn {
   cursor: pointer;
   margin: 0;

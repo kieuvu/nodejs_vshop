@@ -30,10 +30,6 @@ const Cart = new Schema({
     type: Number,
     required: true,
     default: 0
-  },
-  in_process: {
-    type: Number,
-    default: 0,
   }
 }, {
   timestamps: true,

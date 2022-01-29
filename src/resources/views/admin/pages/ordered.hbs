@@ -1,0 +1,69 @@
+<div class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="main-body">
+          <div class="page-wrapper">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+              <div class="page-block">
+                <div class="row align-items-center">
+                  <div class="col-md-12">
+                    <div class="page-header-title">
+                      <h5 class="m-b-10">Quản lí đơn hàng</h5>
+                    </div>
+                    <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                      <li class="breadcrumb-item"><a href="#!">Basic Components</a></li>
+                      <li class="breadcrumb-item"><a href="#!">Navs &amp; tabs</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <div class="row">
+              <!-- [ tabs ] start -->
+              <div class="col-sm-12">
+                <hr>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active text-uppercase" id="recent-order" data-toggle="tab" href="#recent"
+                      role="tab" aria-controls="recent" aria-selected="true">Đơn mới</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" id="confirmed-order" data-toggle="tab" href="#confirmed"
+                      role="tab" aria-controls="confirmed" aria-selected="false">Đang giao</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" id="completed-order" data-toggle="tab" href="#completed"
+                      role="tab" aria-controls="completed" aria-selected="false">Giao thành công</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="recent" role="tabpanel" aria-labelledby="recent-order">
+                    <div class="row" id="recent_items">
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="confirmed" role="tabpanel" aria-labelledby="confirmed-order">
+                    <div class="row" id="confirmed_items">
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-order">
+                    <div class="row" id="complete_items">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ tabs ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/admin_ordered.js"></script>

@@ -31,7 +31,7 @@ class ProductController {
       }
     }
     if (req.query.limit) {
-      let limit = req.query.limit;
+      limit = +req.query.limit;
     }
     if (req.query.prd_brand) {
       let prd_brand = req.query.prd_brand;
@@ -56,6 +56,14 @@ class ProductController {
       let prd_id = req.query.prd_id;
       if (prd_id.length > 0) {
         query.push({ prd_id: prd_id });
+      }
+    }
+    if (req.query.sort) {
+      if (req.query.sort == "price_down") {
+        sort = { prd_price: -1 };
+      }
+      if (req.query.sort == "price_up") {
+        sort = { prd_price: 1 };
       }
     }
 

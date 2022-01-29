@@ -48,7 +48,7 @@ $(document).ready(function () {
       Swal.fire({
         position: 'center',
         icon: 'error',
-        title: 'Chưa có sản phẩm nào trong giỏ hàng',
+        title: 'Chưa có sản phẩm nào trong giỏ hàng.',
         showConfirmButton: true,
         timerProgressBar: true,
         timer: 1500
@@ -62,19 +62,19 @@ $(document).ready(function () {
         Swal.fire({
           position: 'center',
           icon: 'warning',
-          title: 'Vui lòng điền đầy đủ thông tin giao hàng',
+          title: 'Vui lòng điền đầy đủ thông tin giao hàng.',
           showConfirmButton: true,
           timerProgressBar: true,
           timer: 1500
         });
       } else {
         const id = $("#checkoutBtn").data("id");
-        const name = $.trim($("#customer_name").val());
-        const address = $.trim($("#customer_address").val());
-        const phone = $.trim($("#customer_phone").val());
-        const note = $.trim($("#customer_note").val());
+        const customer_name = $.trim($("#customer_name").val());
+        const customer_address = $.trim($("#customer_address").val());
+        const customer_phone = $.trim($("#customer_phone").val());
+        const customer_note = $.trim($("#customer_note").val());
         checkout(id, {
-          name, address, phone, note
+          customer_name, customer_address, customer_phone, customer_note
         });
       }
     }
@@ -95,12 +95,6 @@ $(document).ready(function () {
   function renderData(data) {
     if (data === null) {
       $('#cart_items').html("");
-      $('#cart_items').append(
-        `
-        <div class="d-flex justify-content-center text-secondary">Giỏ hàng rỗng!</div>
-        `
-      );
-
     } else {
       $('#cart_count').html(data.items.length);
       $('#cart_total_price').html(priceFormat(data.total_price));
@@ -111,7 +105,7 @@ $(document).ready(function () {
           <div class="d-flex border rounded p-2 mb-2" style="position:relative;">
           <span data-id="${item.product_id}" style="position:absolute; top:10px;right:10px;" class="close cart_remove">&#10005;</span>
             <div class="mr-2">
-              <div class=""><img class="img-fluid" src="/uploads/img/${item.product_id}"></div>
+              <div><img width="100" src="/uploads/img/${item.product_id}"></div>
             </div>
             <div>
               <div class="pr-3">
@@ -259,11 +253,25 @@ $(document).ready(function () {
       url: "/product/cart/checkout",
       data: {
         id: id,
-        info: info
+        info: JSON.stringify(info)
       },
       success: function (response) {
-        console.log(response);
+        scroolTop();
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Đơn hàng đã được tạo thành công. Mã vận đơn sẽ được gửi tới khách hàng sớm nhất có thể !!!',
+          showConfirmButton: true,
+          timerProgressBar: true,
+          timer: 3000
+        }).then(() => {
+          location.reload();
+        });
       }
     });
+  }
+
+  function scroolTop() {
+    $("html, body").animate({ scrollTop: 0 }, 100);
   }
 });

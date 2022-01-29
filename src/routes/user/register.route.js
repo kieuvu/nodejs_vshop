@@ -10,7 +10,7 @@ const registerValidate = require('../../app/middlewares/registerValidate');
  *
  */
 
-router.get('/', registerController.index); //Show Register Page
+router.get('/', registerController.index);
 router.post('/create', registerValidate.validate, registerController.create);
 
 module.exports = router;

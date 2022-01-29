@@ -1,5 +1,5 @@
 function priceFormat(price) {
-  let fmt = new Intl.NumberFormat('en-US', {
+  let fmt = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
     currency: 'VND',
   });

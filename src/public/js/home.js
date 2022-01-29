@@ -10,39 +10,29 @@ $(document).ready(function () {
   // Handle
 
   // Function
-  function owl(section, items = 5, margin = 80) {
+  function owl(section, items = 5) {
     section.owlCarousel({
       loop: true,
       autoplay: true,
       autoplayTimeout: 2000,
       autoplayHoverPause: true,
-      margin: margin,
       items: items,
+      margin: 10,
       responsive: {
         0: {
           items: 2,
-          margin: 5,
-          center: true
         },
         480: {
           items: 2,
-          margin: 20,
-          center: true
         },
         768: {
-          items: 3,
-          margin: 5,
-          center: false,
+          items: 2,
         },
         1000: {
           items: 4,
-          margin: 5,
-          center: false,
         },
         1200: {
           items: 5,
-          margin: 5,
-          center: false,
         }
       }
     });
@@ -115,7 +105,7 @@ $(document).ready(function () {
       section.append(
         `
         <div class="item">
-          <div class="prd_card p-2 px-5 d-flex flex-column" style="width: 260px;">
+          <div class="prd_card d-flex flex-column">
             <div class="prd_card-img">
               <a class="d-block" href="/product/${item.prd_id}" style="position: relative;width: 100%;padding-top:66.6%;">
                 <img

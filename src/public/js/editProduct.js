@@ -4,6 +4,7 @@ $(document).ready(function () {
   const id = pathname[pathname.length - 1];
   let data = {};
   getProduct(id);
+
   // Handle
 
   // Function

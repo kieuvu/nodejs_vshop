@@ -17,6 +17,10 @@
   cursor: pointer;
 }
 
+.disablebtn {
+  cursor: no-drop;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -27,6 +31,14 @@ input::-webkit-inner-spin-button {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.text-overfl-1line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
@@ -155,7 +167,7 @@ a.no-under:hover {
 }
 
 #pc_nav-cate .second_menu {
-  width: 100%;
+  min-width: 200px;
   left: 0;
   z-index: 9999;
   position: absolute;
@@ -167,6 +179,7 @@ a.no-under:hover {
 
 #pc_nav-cate .second_menu li {
   background: white;
+  border-bottom: 1px solid #ebebeb;
 }
 
 #pc_nav-cate .second_menu li:hover {
@@ -231,11 +244,13 @@ a.no-under:hover {
 /* New Update Product */
 
 /* Product Detail */
+#post_content img,
 #prd_desc img {
   max-width: 100%;
   object-fit: contain;
 }
 
+#post_content figure.image,
 #prd_desc figure.image {
   text-align: center;
 }
@@ -555,3 +570,42 @@ a.no-under:hover {
   cursor: pointer;
 }
 /* Register */
+
+/* Back To Top */
+#backToTop {
+  position: fixed;
+  z-index: 100000000000;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+}
+
+#backToTop button {
+  background: rgba(241, 241, 241, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 8px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #dcdcdc;
+}
+
+#backToTop button:hover {
+  background: rgba(202, 202, 202, 0.5);
+}
+
+#backToTop button i {
+  font-size: 40px;
+  color: #b4b4b4;
+}
+
+/* Product */
+#product_sort {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: #f7f7f7;
+}

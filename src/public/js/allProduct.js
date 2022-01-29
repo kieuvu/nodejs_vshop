@@ -102,6 +102,29 @@ $(document).ready(function () {
     });
   }
 
+  function deleteProduct(id) {
+    $.ajax({
+      type: "DELETE",
+      url: "/admin/product/delete",
+      data: {
+        id: id
+      },
+      success: function (response) {
+        if (!response.err) {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `Xóa thành công !!!`,
+            timerProgressBar: true,
+            timer: 1500
+          }).then(() => {
+            getProduct();
+          });
+        }
+      }
+    });
+  }
+
   function renderData(data) {
     $("#product_show").html("");
 
@@ -124,7 +147,9 @@ $(document).ready(function () {
         `
         <tr>
           <td>
-            <a href="/product/${item.prd_id}">${item.prd_name}</a>
+           <div>
+            <a  style="max-width:450px;" class="d-block text-overfl-2line" href="/product/${item.prd_id}">${item.prd_name}</a>
+           </div>
           </td>
           <td>
             ${(item.prd_priceSaled > 0) ? `
@@ -151,28 +176,5 @@ $(document).ready(function () {
       );
     });
     scroolTop();
-  }
-
-  function deleteProduct(id) {
-    $.ajax({
-      type: "DELETE",
-      url: "/admin/product/delete",
-      data: {
-        id: id
-      },
-      success: function (response) {
-        if (!response.err) {
-          Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: `Xóa thành công !!!`,
-            timerProgressBar: true,
-            timer: 1500
-          }).then(() => {
-            getProduct();
-          });
-        }
-      }
-    });
   }
 })

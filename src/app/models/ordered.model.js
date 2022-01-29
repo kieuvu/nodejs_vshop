@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { required } = require('nodemon/lib/config');
 const Schema = mongoose.Schema;
 
 const Ordered = new Schema({
@@ -46,8 +45,8 @@ const Ordered = new Schema({
   },
   stage: {
     type: Number,
-    default: 0
-  },     // 0: nothing - 1: confirmed  - 3: completed
+    default: 0 // 0: recent - 1: confirmed  - 2: completed
+  },
   total_price: {
     type: Number,
     required: true,

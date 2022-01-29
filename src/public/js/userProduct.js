@@ -2,20 +2,25 @@ $(document).ready(function () {
   // Init
   let currentCate = 'all';
   let currentBrand = 'all';
-  let currentPage = 1;
+  let currentSort = "product_new";
 
   $(window).on('load', function () {
     getCateBrand();
-    getData(currentCate, currentBrand);
+    getData(currentCate, currentBrand, currentSort);
   });
 
   // Handle
+  $('#product_sort').on('change', function () {
+    currentSort = $('#product_sort').val();
+    getData(currentCate, currentBrand, currentSort);
+  });
+
   $(document).on('click', '.cate-item', function (e) {
     e.preventDefault();
     $(".cate-item").removeClass("active");
     $(this).addClass("active");
     currentCate = $(this).data('slug');
-    getData(currentCate, currentBrand);
+    getData(currentCate, currentBrand, currentSort);
   });
 
   $(document).on('click', '.brand-item', function (e) {
@@ -23,7 +28,7 @@ $(document).ready(function () {
     $(".brand-item").removeClass("active");
     $(this).addClass("active");
     currentBrand = $(this).data('slug');
-    getData(currentCate, currentBrand);
+    getData(currentCate, currentBrand, currentSort);
   });
 
   // Function
@@ -81,37 +86,57 @@ $(document).ready(function () {
       pageSize: 24,
       callback: function (data, pagination) {
         currentPage = pagination.pageNumber;
+        scroolTop();
         renderData(data);
       }
     });
   }
 
-  function getData(cate, brand) {
+  function getData(cate, brand, sort) {
     $.ajax({
       type: "GET",
       url: "/api/product/getproduct",
       data: {
-        prd_cate: currentCate,
-        prd_brand: currentBrand,
+        prd_cate: cate,
+        prd_brand: brand,
+        sort: sort
+      },
+      beforeSend: function () {
+        scroolTop();
+        loading('#show_product');
       },
       success: function (response) {
-        pagin(response);
-        // renderData(response);
+        setTimeout(function () {
+          pagin(response);
+        }, 200);
       }
     });
   };
+
+  function loading(selector) {
+    $(selector).html("");
+    $(selector).append(
+      `
+        <div class="col-12">
+          <div class="d-flex justify-content-center align-items-center" style="min-height:50vh;">
+            <img src="/img/746.gif" alt="" />
+          </div>
+        </div>
+     `);
+  }
 
   function renderData(data) {
     $('#show_product').html("");
     if (data.length == 0) {
       $('#show_product').append(
         `
-         <div class="col-12">
-          <div class="text-center">Chưa có sản phẩm nào.</div>
+         <div class="col-12 d-flex align-items-center justify-content-center" style="min-height:50vh;">
+          <p>Chưa có sản phẩm nào.</p>
          </div>
         `
       );
     }
+
     $.each(data, function (index, item) {
       $('#show_product').append(
         `
@@ -145,6 +170,5 @@ $(document).ready(function () {
         `
       );
     });
-    scroolTop();
   }
 });

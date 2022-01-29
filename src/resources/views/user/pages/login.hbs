@@ -35,8 +35,8 @@
 
               <div class="form-floating mb-3">
                 <label for="floatingPassword">Mật khẩu:</label>
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Nhập mật khẩu !"
-                  name="password" required />
+                <input type="password" autocomplete="new-password" class="form-control" id="floatingPassword"
+                  placeholder="Nhập mật khẩu !" name="password" required />
               </div>
 
               {{#if err.password}}
@@ -57,7 +57,8 @@
 
               <hr class="my-4" />
 
-              <a class="d-block text-center mt-2 small" href="/register">Chưa có tải khoản? Bấm vào đây để đăng ký.</a>
+              <a class="d-block text-center mt-2 small" href="/register">Chưa có tài khoản? Bấm vào đây để đăng ký.</a>
+              <a class="d-block text-center mt-2 small" href="/register">Quên mật khẩu?</a>
             </form>
           </div>
         </div>
