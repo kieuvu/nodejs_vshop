@@ -46,5 +46,5 @@ routeMatching(app);
 
 //Listen port
 app.listen(process.env.PORT || 3000, () => {
-  console.log(`App started at http://localhost:${process.env.APP_PORT}`);
+  console.log(`App started at http://localhost:${process.env.PORT}`);
 });
