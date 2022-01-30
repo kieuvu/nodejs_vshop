@@ -18,7 +18,7 @@ class DashboardController {
       totalPost: 0,
       totalUser: 0,
     };
-    const completeOrder = await Ordered.find({ state: 2 });
+    const completeOrder = await Ordered.find({ stage: 2 });
     const totalProduct = await Product.find({});
     const totalUser = await Account.find({}).count();
     const totalPost = await Post.find({}).count();
