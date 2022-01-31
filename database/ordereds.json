@@ -1,0 +1,689 @@
+[{
+  "_id": {
+    "$oid": "61ded30e2b4f6542577e00c2"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "RAM Desktop Gskill Trident Z RGB",
+      "product_id": "y947J7Dro5",
+      "quantity": 1,
+      "price": 2899000,
+      "_id": {
+        "$oid": "61ded3042b4f6542577e00a9"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 1,
+  "total_price": 2899000,
+  "createdAt": {
+    "$date": "2022-01-12T13:09:34.630Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-15T08:11:42.162Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61ded31e2b4f6542577e0101"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Ổ cứng HDD WD 1TB Black 3.5 inch 7200RPM",
+      "product_id": "UVEPU48QkG",
+      "quantity": 1,
+      "price": 6990000,
+      "_id": {
+        "$oid": "61ded3132b4f6542577e00d7"
+      }
+    },
+    {
+      "product_name": "Chuột không dây Logitech MX Master 3 Đen",
+      "product_id": "qZLngQEGlJ",
+      "quantity": 1,
+      "price": 2490000,
+      "_id": {
+        "$oid": "61ded3182b4f6542577e00f0"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "4",
+    "customer_phone": 5,
+    "customer_address": "6",
+    "customer_note": ""
+  },
+  "stage": 1,
+  "total_price": 9480000,
+  "createdAt": {
+    "$date": "2022-01-12T13:09:50.214Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-22T07:41:16.757Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61dfc346e1c74e4887a15c86"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "RAM Desktop Gskill Trident Z RGB",
+      "product_id": "y947J7Dro5",
+      "quantity": 1,
+      "price": 2899000,
+      "_id": {
+        "$oid": "61dfc342e1c74e4887a15c7a"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 2,
+  "total_price": 2899000,
+  "createdAt": {
+    "$date": "2022-01-13T06:14:30.214Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-13T06:16:00.731Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61dfc4a920559e6219f41799"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Ổ cứng HDD WD 1TB Black 3.5 inch 7200RPM",
+      "product_id": "UVEPU48QkG",
+      "quantity": 1,
+      "price": 6990000,
+      "_id": {
+        "$oid": "61dfc4a520559e6219f4178d"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 2,
+  "total_price": 6990000,
+  "createdAt": {
+    "$date": "2022-01-13T06:20:25.719Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-13T06:20:37.980Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61dfd0fc46fe80f89179ec15"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Ổ cứng HDD WD 1TB Black 3.5 inch 7200RPM",
+      "product_id": "UVEPU48QkG",
+      "quantity": 1,
+      "price": 6990000,
+      "_id": {
+        "$oid": "61dfd0f246fe80f89179ec09"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 1,
+  "total_price": 6990000,
+  "createdAt": {
+    "$date": "2022-01-13T07:13:00.420Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-13T07:13:18.425Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e047d9ee1b178d27b89606"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Laptop MSI Modern 15 (A10M-667VN)",
+      "product_id": "6iLikBGUDO",
+      "quantity": 1,
+      "price": 19990000,
+      "_id": {
+        "$oid": "61e047d3ee1b178d27b895fa"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 1,
+  "total_price": 19990000,
+  "createdAt": {
+    "$date": "2022-01-13T15:40:09.435Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T05:56:49.738Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e0485356317de80a261f6e"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Ổ cứng HDD WD 1TB Black 3.5 inch 7200RPM",
+      "product_id": "UVEPU48QkG",
+      "quantity": 1,
+      "price": 6990000,
+      "_id": {
+        "$oid": "61e0484856317de80a261f62"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 1,
+  "total_price": 6990000,
+  "createdAt": {
+    "$date": "2022-01-13T15:42:11.132Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:29:49.333Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e048a096eaf9ce63504cac"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Ổ cứng HDD WD 1TB Black 3.5 inch 7200RPM",
+      "product_id": "UVEPU48QkG",
+      "quantity": 1,
+      "price": 6990000,
+      "_id": {
+        "$oid": "61e0489c96eaf9ce63504ca0"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 3,
+  "total_price": 6990000,
+  "createdAt": {
+    "$date": "2022-01-13T15:43:28.795Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-21T13:51:52.611Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e048af96eaf9ce63504ccd"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "RAM Desktop Gskill Trident Z RGB",
+      "product_id": "y947J7Dro5",
+      "quantity": 1,
+      "price": 2899000,
+      "_id": {
+        "$oid": "61e048aa96eaf9ce63504cc1"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 3,
+  "total_price": 2899000,
+  "createdAt": {
+    "$date": "2022-01-13T15:43:43.051Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-21T13:51:36.419Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e281dc1dfb2a36c9884166"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "RAM Desktop Gskill Trident Z RGB",
+      "product_id": "y947J7Dro5",
+      "quantity": 2,
+      "price": 2899000,
+      "_id": {
+        "$oid": "61e054ff96eaf9ce63504d42"
+      }
+    },
+    {
+      "product_name": "Chuột không dây Logitech MX Master 3 Đen",
+      "product_id": "qZLngQEGlJ",
+      "quantity": 3,
+      "price": 2490000,
+      "_id": {
+        "$oid": "61e0550696eaf9ce63504d56"
+      }
+    },
+    {
+      "product_name": "Ổ cứng HDD WD 1TB Black 3.5 inch 7200RPM",
+      "product_id": "UVEPU48QkG",
+      "quantity": 2,
+      "price": 6990000,
+      "_id": {
+        "$oid": "61e0550e96eaf9ce63504d66"
+      }
+    },
+    {
+      "product_name": "Điện thoại iPhone 8 Plus Cũ (64GB, 256GB)",
+      "product_id": "sNXe3I6Bbf",
+      "quantity": 1,
+      "price": 6500500,
+      "_id": {
+        "$oid": "61e26a63e39bcaad33c18ce9"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 3,
+  "total_price": 33748500,
+  "createdAt": {
+    "$date": "2022-01-15T08:12:12.434Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-21T13:48:51.078Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f41fac94011e81c7f065d5"
+  },
+  "user": "Kieuminhvu111",
+  "items": [
+    {
+      "product_name": "Apple Macbook Pro 13 Touchbar (Z11B000CT)",
+      "product_id": "ZCutUaRvws",
+      "quantity": 3,
+      "price": 38880000,
+      "_id": {
+        "$oid": "61f41f5394011e81c7f0653a"
+      }
+    },
+    {
+      "product_name": "Webcam 720p Logitech C505 Đen",
+      "product_id": "CqZvwiWM2e",
+      "quantity": 1,
+      "price": 974000,
+      "_id": {
+        "$oid": "61f41f7294011e81c7f06565"
+      }
+    },
+    {
+      "product_name": "Samsung Galaxy Tab S7",
+      "product_id": "P4M8rw93Yd",
+      "quantity": 3,
+      "price": 15990000,
+      "_id": {
+        "$oid": "61f41f8b94011e81c7f065a9"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "Kiều Minh Vũ",
+    "customer_phone": 12334556,
+    "customer_address": "Thạch Thất - Hà Nội",
+    "customer_note": "GIao hàng giờ hành chính"
+  },
+  "stage": 3,
+  "total_price": 165584000,
+  "createdAt": {
+    "$date": "2022-01-28T16:54:04.224Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-28T16:54:19.788Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f4fc840fe474d9db22de34"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Laptop Acer Aspire 5 A515-56-54PK (NX.A1GSV.002)",
+      "product_id": "us6EXl5gOD",
+      "quantity": 3,
+      "price": 18990000,
+      "_id": {
+        "$oid": "61f4fbd30fe474d9db22dc3e"
+      }
+    },
+    {
+      "product_name": "Mainboard ASUS ROG STRIX TRX40-E GAMING",
+      "product_id": "c4qHIfgaOX",
+      "quantity": 1,
+      "price": 19800000,
+      "_id": {
+        "$oid": "61f4f9280fe474d9db22d9d7"
+      }
+    },
+    {
+      "product_name": "Ổ cứng HDD WD 1TB Black 3.5 inch 7200RPM",
+      "product_id": "UVEPU48QkG",
+      "quantity": 1,
+      "price": 6990000,
+      "_id": {
+        "$oid": "61e2c6e717b9e38561037c00"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "ádf",
+    "customer_phone": 123123,
+    "customer_address": "123123",
+    "customer_note": ""
+  },
+  "stage": 1,
+  "total_price": 103560000,
+  "createdAt": {
+    "$date": "2022-01-29T08:36:20.208Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:36:33.841Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f4fcf40fe474d9db22debc"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Acer Aspire 5 A515-56-36UT Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | 15.6'' FHD",
+      "product_id": "GZp7m4W5oF",
+      "quantity": 1,
+      "price": 11490000,
+      "_id": {
+        "$oid": "61f4fce80fe474d9db22dea3"
+      }
+    },
+    {
+      "product_name": "Laptop Lenovo V15 IIL (82C500MDVN)",
+      "product_id": "96GOvdcHXg",
+      "quantity": 1,
+      "price": 17990000,
+      "_id": {
+        "$oid": "61f4fcec0fe474d9db22dead"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "sdafasdf",
+    "customer_phone": 2341234,
+    "customer_address": "12341234",
+    "customer_note": "1234123"
+  },
+  "stage": 3,
+  "total_price": 29480000,
+  "createdAt": {
+    "$date": "2022-01-29T08:38:12.275Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:38:16.745Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f4fe8076920f2e415f9833"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Laptop Lenovo V15 IIL (82C500MDVN)",
+      "product_id": "96GOvdcHXg",
+      "quantity": 1,
+      "price": 17990000,
+      "_id": {
+        "$oid": "61f4fcec0fe474d9db22dead"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "123",
+    "customer_phone": 123,
+    "customer_address": "123",
+    "customer_note": ""
+  },
+  "stage": 3,
+  "total_price": 35980000,
+  "createdAt": {
+    "$date": "2022-01-29T08:44:48.620Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:44:53.890Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f4ffa08dc06df4d9bf1765"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Acer Aspire 5 A515-56-36UT Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | 15.6'' FHD",
+      "product_id": "GZp7m4W5oF",
+      "quantity": 1,
+      "price": 11490000,
+      "_id": {
+        "$oid": "61f4fce80fe474d9db22dea3"
+      }
+    },
+    {
+      "product_name": "Laptop Lenovo V15 IIL (82C500MDVN)",
+      "product_id": "96GOvdcHXg",
+      "quantity": 1,
+      "price": 17990000,
+      "_id": {
+        "$oid": "61f4fcec0fe474d9db22dead"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1234",
+    "customer_phone": 1234,
+    "customer_address": "1234",
+    "customer_note": ""
+  },
+  "stage": 3,
+  "total_price": 40970000,
+  "createdAt": {
+    "$date": "2022-01-29T08:49:36.225Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:49:42.098Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f5007a6b7d4226a60b04cc"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Laptop Lenovo V15 IIL (82C500MDVN)",
+      "product_id": "96GOvdcHXg",
+      "quantity": 1,
+      "price": 17990000,
+      "_id": {
+        "$oid": "61f4fcec0fe474d9db22dead"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "ádf",
+    "customer_phone": 2134,
+    "customer_address": "124",
+    "customer_note": ""
+  },
+  "stage": 0,
+  "total_price": 29480000,
+  "createdAt": {
+    "$date": "2022-01-29T08:53:14.945Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:53:14.945Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f501ef8395349a1010753d"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Laptop Lenovo V15 IIL (82C500MDVN)",
+      "product_id": "96GOvdcHXg",
+      "quantity": 1,
+      "price": 17990000,
+      "_id": {
+        "$oid": "61f4fcec0fe474d9db22dead"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "ádfasdf",
+    "customer_phone": 1234,
+    "customer_address": "1234123",
+    "customer_note": ""
+  },
+  "stage": 3,
+  "total_price": 29480000,
+  "createdAt": {
+    "$date": "2022-01-29T08:59:27.344Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:59:38.361Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f50355a3323f367481dc67"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Acer Aspire 5 A515-56-36UT Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | 15.6'' FHD",
+      "product_id": "GZp7m4W5oF",
+      "quantity": 1,
+      "price": 11490000,
+      "_id": {
+        "$oid": "61f4fce80fe474d9db22dea3"
+      }
+    },
+    {
+      "product_name": "Laptop Lenovo V15 IIL (82C500MDVN)",
+      "product_id": "96GOvdcHXg",
+      "quantity": 1,
+      "price": 17990000,
+      "_id": {
+        "$oid": "61f4fcec0fe474d9db22dead"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 0,
+  "total_price": 58960000,
+  "createdAt": {
+    "$date": "2022-01-29T09:05:25.936Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T09:05:25.936Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f503acff0a877bd0e7683a"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Acer Aspire 5 A515-56-36UT Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | 15.6'' FHD",
+      "product_id": "GZp7m4W5oF",
+      "quantity": 1,
+      "price": 11490000,
+      "_id": {
+        "$oid": "61f503a7ff0a877bd0e76830"
+      }
+    }
+  ],
+  "info": {
+    "customer_name": "1",
+    "customer_phone": 1,
+    "customer_address": "1",
+    "customer_note": ""
+  },
+  "stage": 0,
+  "total_price": 11490000,
+  "createdAt": {
+    "$date": "2022-01-29T09:06:52.899Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T09:06:52.899Z"
+  },
+  "__v": 0
+}]

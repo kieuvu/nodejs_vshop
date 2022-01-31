@@ -1,0 +1,197 @@
+[{
+  "_id": {
+    "$oid": "619bc342ae9829fa6fd66092"
+  },
+  "username": "Kieuminhvu41",
+  "password": "$2b$10$ET7flzSWcAS5M3Ha2NXoFuEtdUGP9UWIQU5YEhhRuuZO0qsIt7X4K",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2021-11-22T16:20:18.604Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:12:22.213Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61a0e115babd4934fb8a9b0a"
+  },
+  "username": "Kieuminhvu4",
+  "password": "$2b$10$oaUOPb29vVOjE3TlF1MvX.z5EyU7bK2jH2RF1QK2aZhTYgAfHWRTC",
+  "userperm": 1,
+  "createdAt": {
+    "$date": "2021-11-26T13:28:53.891Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:37:22.008Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61a30f3e8caf2a187ed8e3f0"
+  },
+  "username": "nttp200603",
+  "password": "$2b$10$NdH.wflQCZtgbNz.XsGj5ObZtcVItf3cw35zpOC/3wFQbWaE8.PYq",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2021-11-28T05:10:22.697Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:19:14.082Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61ab852e58b827cdf3125eb6"
+  },
+  "username": "iloveyou123",
+  "password": "$2b$10$gSEzkbjbYLMHYUs4GLVy4.GZm8n658.4u7iRHulozoFycGLB.tjNm",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2021-12-04T15:11:42.616Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:30:30.090Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61ac38a4013369b6174ce057"
+  },
+  "username": "Kieuvuvuvu123",
+  "password": "$2b$10$WrR1CTovNHuGEhNRS57iVOhH/JLFULNiYhd.FQYM0UcmeTITVoAbG",
+  "userperm": 1,
+  "createdAt": {
+    "$date": "2021-12-05T03:57:24.379Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-16T06:19:00.159Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61ac38c5013369b6174ce05a"
+  },
+  "username": "Kieuminhvyvyvy",
+  "password": "$2b$10$JpRNr7m5WP.V7pnjPRBhNOt/tTxs9j7xVz3tmgi9HImUoONrM0rWa",
+  "userperm": 2,
+  "createdAt": {
+    "$date": "2021-12-05T03:57:57.919Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-27T16:06:11.420Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f41dce94011e81c7f064e2"
+  },
+  "username": "Kieuminhvu1234",
+  "password": "$2b$10$79M1i7li4Ezrk.zNNq6STe7PKM6Ut53S0FPOdWujOL9gdpx0wxqGa",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2022-01-28T16:46:06.245Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-28T16:46:06.245Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f41e5c94011e81c7f064f4"
+  },
+  "username": "Kieuminhvu12345",
+  "password": "$2b$10$qZQEPh4SAkEicVJOrZPISO8Q75B4ErZTh78S.1/MU3quyt99bd6Ry",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2022-01-28T16:48:28.170Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-28T16:48:28.170Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f41f1494011e81c7f0651a"
+  },
+  "username": "Kieuminhvu111",
+  "password": "$2b$10$nr9Lz49WmFsBzQ39VEkJZOjTJdLkJx8bWSo/OVzHzkUM3KZjbedme",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2022-01-28T16:51:32.406Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-28T16:51:32.406Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f4207794011e81c7f0663f"
+  },
+  "username": "Kieuminhvuuu",
+  "password": "$2b$10$HOA4SLe5GtCI1n5gDnE0.e1esfkQor4q1X2TM7ulcz6sF6nmabDci",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2022-01-28T16:57:27.497Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-28T16:57:27.497Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f4f60e0fe474d9db22d837"
+  },
+  "username": "Kieuminhvu1212",
+  "password": "$2b$10$XOFUu63IV27oC8VGC.WenODFSgfBNfX0xi/GHngpsipSlYfCWuBKq",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2022-01-29T08:08:46.394Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:08:46.394Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f4f7a30fe474d9db22d8f8"
+  },
+  "username": "Kieuminhvu123345",
+  "password": "$2b$10$9TLlw3fvJvqp6LFIV8Ih9OghYmzrvncC1.NPXcutlvOZyUPP.uUDK",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2022-01-29T08:15:31.460Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:15:31.460Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f4fa2c0fe474d9db22db64"
+  },
+  "username": "Kieuminhvu333",
+  "password": "$2b$10$SgvOk8rBgtaAAcMyY3133Og/ivZSrjp8Gk818QyR13NWIC.78fC7G",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2022-01-29T08:26:20.441Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:26:20.441Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f5606a4d6a1040bc8bd2d9"
+  },
+  "username": "Kieuminhvu2323",
+  "password": "$2b$10$oIGHXmRgoWJoCuVdmTNOcOc98c8ouZPnZtYqru9mS5MXWJArYo8rO",
+  "userperm": 3,
+  "createdAt": {
+    "$date": "2022-01-29T15:42:34.335Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T15:42:34.335Z"
+  },
+  "__v": 0
+}]

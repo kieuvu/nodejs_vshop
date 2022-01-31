@@ -1,0 +1,222 @@
+[{
+  "_id": {
+    "$oid": "61bc323b9c817d91080a11d5"
+  },
+  "brand_name": "Samsung",
+  "brand_slug": "samsung",
+  "createdAt": {
+    "$date": "2021-12-17T06:46:19.538Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-17T06:46:19.538Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61bc32409c817d91080a11da"
+  },
+  "brand_name": "Asus",
+  "brand_slug": "asus",
+  "createdAt": {
+    "$date": "2021-12-17T06:46:24.024Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-17T06:46:24.024Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61bc32449c817d91080a11df"
+  },
+  "brand_name": "Lenovo",
+  "brand_slug": "lenovo",
+  "createdAt": {
+    "$date": "2021-12-17T06:46:28.944Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-17T06:46:28.944Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61bc32489c817d91080a11e4"
+  },
+  "brand_name": "Acer",
+  "brand_slug": "acer",
+  "createdAt": {
+    "$date": "2021-12-17T06:46:32.290Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-17T06:46:32.290Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c17434aea18c974227bec9"
+  },
+  "brand_name": "Sony",
+  "brand_slug": "sony",
+  "createdAt": {
+    "$date": "2021-12-21T06:29:08.707Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-21T06:29:08.707Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c32ac2e72d1fa3b612c525"
+  },
+  "brand_name": "MSI",
+  "brand_slug": "msi",
+  "createdAt": {
+    "$date": "2021-12-22T13:40:18.702Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-22T13:40:18.702Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c40aa4c2bc847d33beb58e"
+  },
+  "brand_name": "Gigabite",
+  "brand_slug": "gigabite",
+  "createdAt": {
+    "$date": "2021-12-23T05:35:32.693Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-23T05:35:32.693Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c6a380c08086699c0a7d0a"
+  },
+  "brand_name": "Dell",
+  "brand_slug": "dell",
+  "createdAt": {
+    "$date": "2021-12-25T04:52:16.328Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-25T04:52:16.328Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c6a77dc08086699c0a7d40"
+  },
+  "brand_name": "Apple",
+  "brand_slug": "apple",
+  "createdAt": {
+    "$date": "2021-12-25T05:09:17.092Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-25T05:09:17.092Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c6aa40c08086699c0a7d5c"
+  },
+  "brand_name": "Xiaomi",
+  "brand_slug": "xiaomi",
+  "createdAt": {
+    "$date": "2021-12-25T05:21:04.765Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-25T05:21:04.765Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c6ace9c08086699c0a7d8e"
+  },
+  "brand_name": "LG",
+  "brand_slug": "lg",
+  "createdAt": {
+    "$date": "2021-12-25T05:32:25.868Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-25T05:32:25.868Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c716a91f21645ed5f1d510"
+  },
+  "brand_name": "HP",
+  "brand_slug": "hp",
+  "createdAt": {
+    "$date": "2021-12-25T13:03:37.851Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-25T13:03:37.851Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c71bef1f21645ed5f1d54d"
+  },
+  "brand_name": "Realme",
+  "brand_slug": "realme",
+  "createdAt": {
+    "$date": "2021-12-25T13:26:07.166Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-25T13:26:07.166Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c71e4f1f21645ed5f1d569"
+  },
+  "brand_name": "Nokia",
+  "brand_slug": "nokia",
+  "createdAt": {
+    "$date": "2021-12-25T13:36:15.724Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-25T13:36:15.724Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c7fca67bcb0dff886bab9a"
+  },
+  "brand_name": "Logitech",
+  "brand_slug": "logitech",
+  "createdAt": {
+    "$date": "2021-12-26T05:24:54.908Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-26T05:24:54.908Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c9e1e1772bd2b54994f187"
+  },
+  "brand_name": "Western",
+  "brand_slug": "western",
+  "createdAt": {
+    "$date": "2021-12-27T15:55:13.343Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-27T15:55:13.343Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c9e2b1772bd2b54994f198"
+  },
+  "brand_name": "Kingstone",
+  "brand_slug": "kingstone",
+  "createdAt": {
+    "$date": "2021-12-27T15:58:41.869Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-27T15:58:41.869Z"
+  },
+  "__v": 0
+}]

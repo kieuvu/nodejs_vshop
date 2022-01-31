@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "61f4d4201dcffff7ab3ec183"
+  },
+  "user": "Kieuvuvuvu123",
+  "items": [
+    {
+      "product_name": "Apple Macbook Pro 13 Touchbar (Z11B000CT)",
+      "product_id": "ZCutUaRvws",
+      "quantity": 1,
+      "price": 38880000,
+      "_id": {
+        "$oid": "61f4d4201dcffff7ab3ec184"
+      }
+    },
+    {
+      "product_name": "Điện thoại iPhone X Cũ (64GB, 256GB) - FullBox",
+      "product_id": "TbtoUWcAUV",
+      "quantity": 1,
+      "price": 10900000,
+      "_id": {
+        "$oid": "61f4d5601dcffff7ab3ec1b5"
+      }
+    }
+  ],
+  "total_price": 49780000,
+  "createdAt": {
+    "$date": "2022-01-29T05:44:00.842Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T05:51:50.243Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f503b6ff0a877bd0e7686e"
+  },
+  "user": "Kieuminhvu4",
+  "items": [
+    {
+      "product_name": "Acer Aspire 5 A515-56-36UT Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | 15.6'' FHD",
+      "product_id": "GZp7m4W5oF",
+      "quantity": 1,
+      "price": 11490000,
+      "_id": {
+        "$oid": "61f4fce80fe474d9db22dea3"
+      }
+    },
+    {
+      "product_name": "Laptop Lenovo V15 IIL (82C500MDVN)",
+      "product_id": "96GOvdcHXg",
+      "quantity": 1,
+      "price": 17990000,
+      "_id": {
+        "$oid": "61f4fcec0fe474d9db22dead"
+      }
+    }
+  ],
+  "total_price": 29480000,
+  "createdAt": {
+    "$date": "2022-01-29T09:07:02.978Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T09:07:02.982Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "61bc321c9c817d91080a11c3"
+  },
+  "cate_name": "Điện thoại",
+  "cate_slug": "dien-thoai",
+  "createdAt": {
+    "$date": "2021-12-17T06:45:48.998Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-17T06:45:48.998Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61bc32339c817d91080a11d0"
+  },
+  "cate_name": "PC",
+  "cate_slug": "pc",
+  "createdAt": {
+    "$date": "2021-12-17T06:46:11.339Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-17T06:46:11.339Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61bc53074d1f9be8acbfb3d7"
+  },
+  "cate_name": "Phụ kiện",
+  "cate_slug": "phu-kien",
+  "createdAt": {
+    "$date": "2021-12-17T09:06:15.434Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-17T09:06:15.434Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c172e4aea18c974227bec0"
+  },
+  "cate_name": "Laptop",
+  "cate_slug": "laptop",
+  "createdAt": {
+    "$date": "2021-12-21T06:23:32.174Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-21T06:23:32.174Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c40a85c2bc847d33beb589"
+  },
+  "cate_name": "Linh kiện",
+  "cate_slug": "linh-kien",
+  "createdAt": {
+    "$date": "2021-12-23T05:35:01.494Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-23T05:35:01.494Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c5c912d6e293b22b432361"
+  },
+  "cate_name": "Tablet",
+  "cate_slug": "tablet",
+  "createdAt": {
+    "$date": "2021-12-24T13:20:18.808Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-24T13:20:18.808Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c5ca48d6e293b22b43236f"
+  },
+  "cate_name": "Laptop Gaming",
+  "cate_slug": "laptop-gaming",
+  "createdAt": {
+    "$date": "2021-12-24T13:25:28.228Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-24T13:25:28.228Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f4fadc0fe474d9db22dbb7"
+  },
+  "cate_name": "Tai nghe",
+  "cate_slug": "tai-nghe",
+  "createdAt": {
+    "$date": "2022-01-29T08:29:16.610Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T08:29:16.610Z"
+  },
+  "__v": 0
+}]
